@@ -46,7 +46,7 @@ void StepMotor::moveMinute() {
     moveSecond();
     delay(SECOND - STEP_DELAY);
   }
-  moveSteps(32 * 64 - floor(32 * 64 / 60));
+  moveSteps(true, 32 * 64 - floor(32 * 64 / 60), STEP_DELAY);
 }
 
 void StepMotor::moveSteps(bool dir, int steps, byte ms) {
