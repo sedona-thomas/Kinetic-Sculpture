@@ -1,21 +1,3 @@
-
-
-class StepMotor {
-public:
-  StepMotor(std::string, int, int, int, int);
-  StepMotor(std::string);
-  void setup();
-  void run();
-  void moveSteps(bool, int, byte);
-  void moveOneStep(bool);
-  void moveAround(bool, int, byte);
-  void moveAngle(bool, int, byte);
-
-private:
-  std::string name;
-  int outPorts[];
-}
-
 StepMotor::StepMotor(std::string _name) {
   name = _name;
   outPorts = {33, 27, 26, 25};
@@ -70,17 +52,6 @@ void StepMotor::moveAngle(bool dir, int angle, byte ms) {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class ServoMotor {
-public:
-  ServoMotor(std::string, int);
-  ServoMotor(std::string);
-  void setup();
-  void run();
-
-private:
-  std::string name;
-  int port;
-}
 
 ServoMotor::ServoMotor(std::string _name) {
   name = _name;
