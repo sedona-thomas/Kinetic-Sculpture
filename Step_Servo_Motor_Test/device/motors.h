@@ -4,6 +4,7 @@ class StepMotor {
 public:
   StepMotor(std::string, int, int, int, int);
   StepMotor(std::string);
+  StepMotor();
   void setup();
   void run();
   void moveSteps(bool, int, byte);
@@ -13,7 +14,7 @@ public:
 
 private:
   std::string name;
-  int outPorts[];
+  int outPorts[4];
 };
 
 class ServoMotor {
