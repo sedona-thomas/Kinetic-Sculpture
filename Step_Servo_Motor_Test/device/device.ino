@@ -16,12 +16,12 @@ void setupMotors() {
   step.setup();
   servo.setup();
 
-  step.run();
-  servo.run();
+  // step.run();
+  // servo.run();
 }
 
 void runMotors() {
-  step.moveMinute();
+  // step.moveMinute();
   servo.moveMinute();
 }
 
