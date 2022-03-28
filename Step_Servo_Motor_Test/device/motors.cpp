@@ -95,9 +95,10 @@ ServoMotor::ServoMotor(std::string _name, int pin) {
 }
 
 void ServoMotor::setup() {
-  posVal = 0;
   motor.setPeriodHertz(50);
   motor.attach(port, 500, 2500);
+  posVal = 0;
+  motor.write(posVal);
 }
 
 void ServoMotor::run() {
@@ -127,7 +128,7 @@ void ServoMotor::rotateClockwise(int degrees) {
 
 void ServoMotor::moveMinute() {
   if (posVal >= 180) {
-    rotateCounterclockwise(0);
+    rotateCounterclockwise(180);
   }
   rotateClockwise(10);
 }
