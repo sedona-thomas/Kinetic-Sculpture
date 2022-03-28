@@ -7,11 +7,6 @@
 
 #include "esp32_screen.h"
 #include "motors.h"
-#include <SPI.h>
-#include <TFT_eSPI.h>
-#include <list>
-#include <stdint.h>
-#include <string>
 
 StepMotor step;
 ServoMotor servo;
@@ -29,4 +24,8 @@ void setup() {
   rainbowBackground();
 }
 
-void loop() { runMotors(); }
+void loop() {
+  updateScreen(DISPLAY_VALUES);
+  runMotors();
+  delay(FRAMERATE);
+}
