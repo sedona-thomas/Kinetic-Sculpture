@@ -5,8 +5,8 @@
 #include <ESP32Servo.h>
 #include <cmath>
 
-#define SECOND 10      // miliseconds (1000 miliseconds : 1 second)
-#define STEP_DELAY 10  // miliseconds
+#define SECOND 3       // miliseconds (1000 miliseconds : 1 second)
+#define STEP_DELAY 3   // miliseconds
 #define SERVO_DELAY 15 // miliseconds
 
 class StepMotor {
@@ -34,6 +34,7 @@ public:
   ServoMotor(std::string);
   ServoMotor();
   int getAngle();
+  void changeAngle(int);
   void setup();
   void reset();
   void run();

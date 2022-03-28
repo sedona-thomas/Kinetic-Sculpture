@@ -30,15 +30,45 @@ void runMotors() {
   // servo.moveMinute();
   Serial.println("Run");
 
+  servo.moveTo(0);
+  delay(5000);
+  servo.moveTo(10);
+  delay(1000);
+  servo.moveTo(20);
+  delay(1000);
+  servo.moveTo(30);
+  delay(1000);
+  servo.moveTo(180);
+  delay(1000);
+
+  /*
   for (int i = 0; i < 20; i++) {
     if (servo.getAngle() >= 180) {
+      Serial.println("A");
       servo.rotateCounterclockwise(0);
+      Serial.println("B");
     } else {
-      servo.rotateClockwise(180 / 10);
+      Serial.println("C");
+      for (; servo.getAngle() >= servo.getAngle() - (180 / 10);
+           servo.changeAngle(-1)) {
+        motor.write(servo.getAngle());
+        delay(10);
+      }
+      // servo.rotateClockwise(180 / 10);
+      Serial.println("D");
     }
-    delay(SERVO_DELAY);
+    Serial.println("E");
+    delay(15);
     Serial.println("Next");
     Serial.println(servo.getAngle());
+  }
+  */
+}
+
+void runClock() {
+  for (int angle = 0; true; angle = (angle + 10) % 190) {
+    step.moveMinute();
+    servo.moveTo(angle);
   }
 }
 
@@ -56,6 +86,6 @@ void setup() {
 }
 
 void loop() {
-  Serial.println("Loop");
-  runMotors();
+  // runMotors();
+  runClock();
 }

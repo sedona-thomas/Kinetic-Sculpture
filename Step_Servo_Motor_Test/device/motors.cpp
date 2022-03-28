@@ -46,7 +46,7 @@ void StepMotor::moveMinute() {
     moveSecond();
     delay(SECOND - STEP_DELAY);
   }
-  moveSteps(true, 32 * 64 - floor(32 * 64 / 60), 3);
+  moveSteps(true, (32 * 64) - (60 * floor(32 * 64 / 60)), 3);
 }
 
 void StepMotor::moveSteps(bool dir, int steps, byte ms) {
@@ -106,6 +106,8 @@ void ServoMotor::reset() {
 }
 
 int ServoMotor::getAngle() { return angle; }
+
+void ServoMotor::changeAngle(int change) { angle += change; }
 
 void ServoMotor::run() {
   for (int p = 0; p <= 180; p += 1) {
