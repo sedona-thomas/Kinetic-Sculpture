@@ -34,6 +34,7 @@ public:
   ServoMotor(std::string);
   ServoMotor();
   void setup();
+  void reset();
   void run();
   void rotateClockwise(int);
   void rotateCounterclockwise(int);
