@@ -11,9 +11,15 @@
 StepMotor step = StepMotor();
 ServoMotor servo = ServoMotor();
 
-void setupMotors() {}
+void setupMotors() {
+  step.setup();
+  servo.setup();
+}
 
-void runMotors() {}
+void runMotors() {
+  step.run();
+  servo.run();
+}
 
 void setup() {
   setupScreen();
