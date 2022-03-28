@@ -3,8 +3,11 @@
 
 #include <Arduino.h>
 #include <ESP32Servo.h>
+#include <cmath>
 
-#define SECOND 1000 // miliseconds == 1 second
+#define SECOND 1000    // miliseconds == 1 second
+#define STEP_DELAY 10  // miliseconds
+#define SERVO_DELAY 15 // miliseconds
 
 class StepMotor {
 public:
@@ -13,6 +16,7 @@ public:
   StepMotor();
   void setup();
   void run();
+  void moveSecond();
   void moveMinute();
   void moveSteps(bool, int, byte);
   void moveOneStep(bool);
@@ -31,8 +35,9 @@ public:
   ServoMotor();
   void setup();
   void run();
+  void Clockwise(int);
+  void Counterclockwise(int);
   void moveMinute();
-  void moveSecond();
 
 private:
   std::string name;
