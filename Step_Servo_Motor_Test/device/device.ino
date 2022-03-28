@@ -27,7 +27,7 @@ void setupMotors() {
 void runMotors() {
   Serial.println("Start Run");
   // step.moveMinute();
-  servo.moveMinute();
+  // servo.moveMinute();
   Serial.println("Run");
 
   for (int i = 0; i < 20; i++) {
