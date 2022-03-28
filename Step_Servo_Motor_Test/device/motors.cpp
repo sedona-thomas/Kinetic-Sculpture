@@ -1,18 +1,27 @@
 #include "motors.h"
 
-StepMotor::StepMotor(std::string _name) {
+StepMotor::StepMotor() {
   name = "step";
-  outPorts = {33, 25, 26, 27};
+  outPorts[0] = 33;
+  outPorts[1] = 25;
+  outPorts[2] = 26;
+  outPorts[3] = 27;
 }
 
 StepMotor::StepMotor(std::string _name) {
   name = _name;
-  outPorts = {33, 25, 26, 27};
+  outPorts[0] = 33;
+  outPorts[1] = 25;
+  outPorts[2] = 26;
+  outPorts[3] = 27;
 }
 
 StepMotor::StepMotor(std::string _name, int in1, int in2, int in3, int in4) {
   name = _name;
-  outPorts = {in1, in2, in3, in4};
+  outPorts[0] = in1;
+  outPorts[1] = in2;
+  outPorts[2] = in3;
+  outPorts[3] = in4;
 }
 
 void StepMotor::setup() {
@@ -58,14 +67,14 @@ void StepMotor::moveAngle(bool dir, int angle, byte ms) {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-ServoMotor::ServoMotor(std::string _name) {
+ServoMotor::ServoMotor() {
   name = "servo";
-  outPorts = 15;
+  port = 15;
 }
 
 ServoMotor::ServoMotor(std::string _name) {
   name = _name;
-  outPorts = 15;
+  port = 15;
 }
 
 ServoMotor::ServoMotor(std::string _name, int pin) {
