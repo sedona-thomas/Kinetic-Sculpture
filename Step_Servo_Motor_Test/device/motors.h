@@ -44,7 +44,7 @@ private:
   std::string name;
   Servo motor;
   int port;
-  int posVal;
+  int angle;
 };
 
 #endif

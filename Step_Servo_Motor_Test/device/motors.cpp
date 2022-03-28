@@ -101,8 +101,8 @@ void ServoMotor::setup() {
 }
 
 void ServoMotor::reset() {
-  posVal = 0;
-  motor.write(posVal);
+  angle = 0;
+  motor.write(angle);
 }
 
 void ServoMotor::run() {
@@ -117,26 +117,39 @@ void ServoMotor::run() {
   reset();
 }
 
+void ServoMotor::moveTo(int newAngle) {
+  if (angle < newAngle) {
+    for (; angle <= newAngle; angle += 1) {
+      motor.write(angle);
+      delay(SERVO_DELAY);
+    }
+  } else {
+    for (; angle >= newAngle; angle -= 1) {
+      motor.write(angle);
+      delay(SERVO_DELAY);
+    }
+  }
+}
+
 void ServoMotor::rotateCounterclockwise(int degrees) {
-  for (; posVal <= degrees; posVal += 1) {
-    motor.write(posVal);
+  for (; angle <= angle + degrees; angle += 1) {
+    motor.write(angle);
     delay(SERVO_DELAY);
   }
 }
 
 void ServoMotor::rotateClockwise(int degrees) {
-  for (; posVal >= degrees; posVal -= 1) {
-    motor.write(posVal);
+  for (; angle >= angle - degrees; angle -= 1) {
+    motor.write(angle);
     delay(SERVO_DELAY);
   }
 }
 
 void ServoMotor::moveMinute() {
-  if (posVal >= 180) {
+  if (angle >= 180) {
     rotateCounterclockwise(0);
   } else {
-    posVal += 180 / 10;
-    rotateClockwise(posVal);
+    rotateClockwise(180 / 10);
   }
   delay(SERVO_DELAY * 30);
 }
