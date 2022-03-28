@@ -38,7 +38,7 @@
 - Open Terminal
 - Download pyserial `conda install pyserial`
 
-### Connect Motors
+### Build Clock
 
 #### Step Motor
 
@@ -46,22 +46,37 @@
 - Connect IN2 to `GPIO Pin #25`
 - Connect IN3 to `GPIO Pin #26`
 - Connect IN4 to `GPIO Pin #27`
-- Open the Arduino IDE
-- Open `step_motor/step_motor.ino` from the Arduino IDE
-- Plug in the ESP32 TTGO T-Display
-- Select `Sketch > Upload`
 
 #### Servo Motor
 
 - Connect the orange wire (first wire) to `GPIO Pin #15`
 - Connect the red wire (second wire) to the 5V pin
 - Connect the brown wire (third wire) to a ground pin
+
+#### Test ESP32 TTGO T-Display
+
 - Open the Arduino IDE
-- Open `servo_motor/servo_motor.ino` from the Arduino IDE
+- Open `Clock_Test/device/device.ino`
 - Plug in the ESP32 TTGO T-Display
 - Select `Sketch > Upload`
 
+### Build Kinetic Sculpture
+
+#### Step Motor
+
+- Connect IN1 to `GPIO Pin #33`
+- Connect IN2 to `GPIO Pin #25`
+- Connect IN3 to `GPIO Pin #26`
+- Connect IN4 to `GPIO Pin #27`
+
+#### Servo Motor
+
+- Connect the orange wire (first wire) to `GPIO Pin #15`
+- Connect the red wire (second wire) to the 5V pin
+- Connect the brown wire (third wire) to a ground pin
+
 #### Brush Motor
 
-- Connect the positive terminal to the 3V pin on the ESP32
+- Connect the positive terminal to the ____ pin on the ESP32
 - Connect the negaitve terminal to a Ground pin on the ESP32
+
