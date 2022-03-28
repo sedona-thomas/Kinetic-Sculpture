@@ -70,30 +70,33 @@ void StepMotor::moveAngle(bool dir, int angle, byte ms) {
 ServoMotor::ServoMotor() {
   name = "servo";
   port = 15;
+  setup();
 }
 
 ServoMotor::ServoMotor(std::string _name) {
   name = _name;
   port = 15;
+  setup();
 }
 
 ServoMotor::ServoMotor(std::string _name, int pin) {
   name = _name;
   port = pin;
+  setup();
 }
 
 void ServoMotor::setup() {
-  myservo.setPeriodHertz(50);
-  myservo.attach(port, 500, 2500);
+  motor.setPeriodHertz(50);
+  motor.attach(port, 500, 2500);
 }
 
 void ServoMotor::run() {
   for (posVal = 0; posVal <= 180; posVal += 1) {
-    myservo.write(posVal);
+    motor.write(posVal);
     delay(15);
   }
   for (posVal = 180; posVal >= 0; posVal -= 1) {
-    myservo.write(posVal);
+    motor.write(posVal);
     delay(15);
   }
 }
