@@ -18,8 +18,8 @@ void setupMotors() {
 }
 
 void runMotors() {
-  step.run();
-  servo.run();
+  step.moveMinute();
+  servo.moveMinute();
 }
 
 void setup() {
