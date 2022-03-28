@@ -35,8 +35,8 @@ public:
   ServoMotor();
   void setup();
   void run();
-  void Clockwise(int);
-  void Counterclockwise(int);
+  void rotateClockwise(int);
+  void rotateCounterclockwise(int);
   void moveMinute();
 
 private:
