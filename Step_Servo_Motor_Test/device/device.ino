@@ -54,4 +54,7 @@ void setup() {
   setupMotors();
 }
 
-void loop() { runMotors(); }
+void loop() {
+  Serial.println("Loop");
+  runMotors();
+}
