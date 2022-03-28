@@ -18,7 +18,6 @@ void runMotors() {}
 void setup() {
   setupScreen();
   setupMotors();
-  rainbowBackground();
 }
 
 void loop() {
