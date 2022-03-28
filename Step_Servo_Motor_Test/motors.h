@@ -1,3 +1,4 @@
+#include <Arduino.h>
 
 class StepMotor {
 public:
@@ -13,16 +14,17 @@ public:
 private:
   std::string name;
   int outPorts[];
-}
+};
 
 class ServoMotor {
 public:
   ServoMotor(std::string, int);
   ServoMotor(std::string);
+  ServoMotor();
   void setup();
   void run();
 
 private:
   std::string name;
   int port;
-}
+};

@@ -1,6 +1,13 @@
+#include "motors.h"
+
+StepMotor::StepMotor(std::string _name) {
+  name = "step";
+  outPorts = {33, 25, 26, 27};
+}
+
 StepMotor::StepMotor(std::string _name) {
   name = _name;
-  outPorts = {33, 27, 26, 25};
+  outPorts = {33, 25, 26, 27};
 }
 
 StepMotor::StepMotor(std::string _name, int in1, int in2, int in3, int in4) {
@@ -49,9 +56,12 @@ void StepMotor::moveAngle(bool dir, int angle, byte ms) {
   moveSteps(dir, (angle * 32 * 64 / 360), ms);
 }
 
-
 ////////////////////////////////////////////////////////////////////////////////
 
+ServoMotor::ServoMotor(std::string _name) {
+  name = "servo";
+  outPorts = 15;
+}
 
 ServoMotor::ServoMotor(std::string _name) {
   name = _name;
@@ -69,13 +79,11 @@ void ServoMotor::setup() {
 }
 
 void ServoMotor::run() {
-  for (posVal = 0; posVal <= 180;
-       posVal += 1) {
+  for (posVal = 0; posVal <= 180; posVal += 1) {
     myservo.write(posVal);
     delay(15);
   }
-  for (posVal = 180; posVal >= 0;
-       posVal -= 1) {
+  for (posVal = 180; posVal >= 0; posVal -= 1) {
     myservo.write(posVal);
     delay(15);
   }
