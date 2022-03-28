@@ -4,10 +4,6 @@
 #include <Arduino.h>
 #include <ESP32Servo.h>
 
-void setup() {
-  
-}
-
 class StepMotor {
 public:
   StepMotor(std::string, int, int, int, int);
