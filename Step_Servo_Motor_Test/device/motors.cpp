@@ -70,19 +70,16 @@ void StepMotor::moveAngle(bool dir, int angle, byte ms) {
 ServoMotor::ServoMotor() {
   name = "servo";
   port = 15;
-  setup();
 }
 
 ServoMotor::ServoMotor(std::string _name) {
   name = _name;
   port = 15;
-  setup();
 }
 
 ServoMotor::ServoMotor(std::string _name, int pin) {
   name = _name;
   port = pin;
-  setup();
 }
 
 void ServoMotor::setup() {
