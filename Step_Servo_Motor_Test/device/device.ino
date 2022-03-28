@@ -8,13 +8,10 @@
 #include "esp32_screen.h"
 #include "motors.h"
 
-StepMotor step;
-ServoMotor servo;
+StepMotor step = StepMotor();
+ServoMotor servo = ServoMotor();
 
-void setupMotors() {
-  step = StepMotor();
-  servo = ServoMotor();
-}
+void setupMotors() {}
 
 void runMotors() {}
 
