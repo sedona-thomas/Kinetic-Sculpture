@@ -133,7 +133,9 @@ void ServoMotor::rotateClockwise(int degrees) {
 
 void ServoMotor::moveMinute() {
   if (posVal >= 180) {
-    rotateCounterclockwise(180);
+    rotateCounterclockwise(0);
+  } else {
+    posVal += 10;
+    rotateClockwise(posVal);
   }
-  rotateClockwise(10);
 }
