@@ -33,9 +33,11 @@ public:
   ServoMotor(std::string, int);
   ServoMotor(std::string);
   ServoMotor();
+  int getAngle();
   void setup();
   void reset();
   void run();
+  void moveTo(int);
   void rotateClockwise(int);
   void rotateCounterclockwise(int);
   void moveMinute();

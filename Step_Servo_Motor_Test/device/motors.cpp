@@ -105,6 +105,8 @@ void ServoMotor::reset() {
   motor.write(angle);
 }
 
+int ServoMotor::getAngle() { return angle; }
+
 void ServoMotor::run() {
   for (int p = 0; p <= 180; p += 1) {
     motor.write(p);

@@ -14,17 +14,31 @@ StepMotor step = StepMotor();
 ServoMotor servo = ServoMotor();
 
 void setupMotors() {
+  Serial.println("Setup1");
   step.setup();
   servo.setup();
 
   // step.run();
   // servo.run();
+
+  Serial.println("Setup2");
 }
 
 void runMotors() {
   // step.moveMinute();
   servo.moveMinute();
   Serial.println("Run");
+
+  for (int i = 0; i < 20; i++) {
+    if (servo.getAngle() >= 180) {
+      servo.rotateCounterclockwise(0);
+    } else {
+      servo.rotateClockwise(180 / 10);
+    }
+    delay(SERVO_DELAY * 30);
+    Serial.println("Next");
+    Serial.println(servo.getAngle());
+  }
 }
 
 // setupSerial(): starts serial communication
