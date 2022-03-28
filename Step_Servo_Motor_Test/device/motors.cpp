@@ -86,6 +86,7 @@ ServoMotor::ServoMotor(std::string _name, int pin) {
 }
 
 void ServoMotor::setup() {
+  posVal = 0;
   motor.setPeriodHertz(50);
   motor.attach(port, 500, 2500);
 }
