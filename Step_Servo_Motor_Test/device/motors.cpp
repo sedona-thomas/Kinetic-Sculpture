@@ -153,5 +153,5 @@ void ServoMotor::moveMinute() {
   } else {
     rotateClockwise(180 / 10);
   }
-  delay(SERVO_DELAY * 30);
+  delay(SERVO_DELAY);
 }
