@@ -135,7 +135,8 @@ void ServoMotor::moveMinute() {
   if (posVal >= 180) {
     rotateCounterclockwise(0);
   } else {
-    posVal += 10;
+    posVal += 180 / 10;
     rotateClockwise(posVal);
   }
+  delay(SERVO_DELAY * 30);
 }
