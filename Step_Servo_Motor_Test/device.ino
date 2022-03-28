@@ -26,10 +26,7 @@ void runMotors() {}
 void setup() {
   setupScreen();
   setupMotors();
+  rainbowBackground();
 }
 
-void loop() {
-  updateScreen(DISPLAY_VALUES);
-  runMotors();
-  delay(FRAMERATE);
-}
+void loop() { runMotors(); }
