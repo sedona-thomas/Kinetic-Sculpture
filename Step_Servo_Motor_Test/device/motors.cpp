@@ -97,19 +97,24 @@ ServoMotor::ServoMotor(std::string _name, int pin) {
 void ServoMotor::setup() {
   motor.setPeriodHertz(50);
   motor.attach(port, 500, 2500);
+  reset();
+}
+
+void ServoMotor::reset() {
   posVal = 0;
   motor.write(posVal);
 }
 
 void ServoMotor::run() {
-  for (posVal = 0; posVal <= 180; posVal += 1) {
-    motor.write(posVal);
+  for (int p = 0; p <= 180; p += 1) {
+    motor.write(p);
     delay(15);
   }
-  for (posVal = 180; posVal >= 0; posVal -= 1) {
-    motor.write(posVal);
+  for (int p = 180; p >= 0; p -= 1) {
+    motor.write(p);
     delay(15);
   }
+  reset();
 }
 
 void ServoMotor::rotateCounterclockwise(int degrees) {
