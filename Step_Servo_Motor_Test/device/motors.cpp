@@ -36,6 +36,9 @@ void StepMotor::run() {
   moveSteps(false, 32 * 64, 3);
   delay(1000);
 }
+void StepMotor::moveMinute() {
+  moveSteps(true, 32 * 64, 3);
+}
 
 void StepMotor::moveSteps(bool dir, int steps, byte ms) {
   for (unsigned long i = 0; i < steps; i++) {
@@ -89,6 +92,17 @@ void ServoMotor::setup() {
 }
 
 void ServoMotor::run() {
+  for (posVal = 0; posVal <= 180; posVal += 1) {
+    motor.write(posVal);
+    delay(15);
+  }
+  for (posVal = 180; posVal >= 0; posVal -= 1) {
+    motor.write(posVal);
+    delay(15);
+  }
+}
+
+void ServoMotor::moveSecond() {
   for (posVal = 0; posVal <= 180; posVal += 1) {
     motor.write(posVal);
     delay(15);
