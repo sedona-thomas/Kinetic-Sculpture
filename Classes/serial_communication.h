@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include <string>
 
-#define JSON true // sends JSON data over serial connection not tagged
+#define JSON true /**< sends JSON data over serial connection not tagged */
 
 class SerialCommunication {
 protected:

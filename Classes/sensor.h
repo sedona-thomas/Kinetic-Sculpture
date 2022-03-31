@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include "ValueQueue.h"
 
-#define DISPLAY_VALUES true // true: sensors; false: rainbow background
+#define DISPLAY_VALUES true /**< true: sensors; false: rainbow background */
 
 class Sensor {
 protected:

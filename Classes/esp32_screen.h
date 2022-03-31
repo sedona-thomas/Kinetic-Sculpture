@@ -6,8 +6,8 @@
 #include <stdint.h>
 #include <string>
 
-#define WAIT 500     // miliseconds
-#define FRAMERATE 50 // miliseconds
+#define WAIT 500     /**< miliseconds */
+#define FRAMERATE 50 /**< miliseconds */
 
 void setupScreen();
 void resetScreen();

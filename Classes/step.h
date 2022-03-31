@@ -4,8 +4,8 @@
 #include <Arduino.h>
 #include <cmath>
 
-#define SECOND 1000  // miliseconds (1000 miliseconds : 1 second)
-#define STEP_DELAY 3 // miliseconds
+#define SECOND 1000  /**< miliseconds (1000 miliseconds : 1 second) */
+#define STEP_DELAY 3 /**< miliseconds */
 
 class StepMotor
 {

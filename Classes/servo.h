@@ -5,8 +5,8 @@
 #include <ESP32Servo.h>
 #include <cmath>
 
-#define SECOND 1000    // miliseconds (1000 miliseconds : 1 second)
-#define SERVO_DELAY 15 // miliseconds
+#define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
+#define SERVO_DELAY 15 /**< miliseconds */
 
 class ServoMotor
 {
