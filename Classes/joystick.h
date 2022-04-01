@@ -5,6 +5,12 @@
 #include "button.h"
 #include "potentiometer.h"
 
+/**
+ * The Joystick class controls the necessary features of a joystick
+ * 
+ * @author Sedona Thomas
+ * @version 1.0.0
+ */
 class Joystick : public SerialCommunication {
 public:
   Joystick(){};

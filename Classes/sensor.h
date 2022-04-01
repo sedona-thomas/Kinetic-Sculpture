@@ -4,6 +4,7 @@
 #include <Arduino.h>
 #include <stdint.h>
 #include "ValueQueue.h"
+#include "esp32_screen.h"
 
 #define DISPLAY_VALUES true /**< true: sensors; false: rainbow background */
 

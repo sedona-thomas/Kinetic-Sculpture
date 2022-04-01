@@ -4,6 +4,12 @@
 #include "serial_communication.h"
 #include "sensor.h"
 
+/**
+ * The Potentiometer class controls the necessary features of a potentiometer
+ * 
+ * @author Sedona Thomas
+ * @version 1.0.0
+ */
 class Potentiometer : public Sensor, public SerialCommunication {
 public:
   Potentiometer(){};

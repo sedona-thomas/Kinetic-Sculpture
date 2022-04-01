@@ -1,16 +1,22 @@
+/**
+ * The esp32 screen methods handle an ESP TFT display
+ * 
+ * @author Sedona Thomas
+ */
+
 #include "esp32_screen.h"
 
-TFT_eSPI tft = TFT_eSPI();
-uint32_t currentBackgroundColor = TFT_WHITE, currentTextColor = TFT_BLACK;
-uint8_t currentTextSize = 1; // 10 pixels
-
-// setupScreen(): starts ESP32 screen
+/**
+ * The setupScreen starts ESP32 screen and sets the rotation
+ */
 void setupScreen() {
   tft.init();
   tft.setRotation(2);
 }
 
-// resetScreen(): resets the background and text color/size of the display
+/** 
+ * The resetScreen method resets the background and text color/size of the display
+ */
 void resetScreen() {
   tft.setTextSize(currentTextSize);
   tft.fillScreen(currentBackgroundColor);
@@ -19,7 +25,11 @@ void resetScreen() {
   tft.setRotation(2);
 }
 
-// updateScreen(): updates current screen
+/** 
+ * The updateScreen method updates current screen with sensor values or as a rainbow background
+ * 
+ * @param display_values defines whether values are being displayed
+ */
 void updateScreen(bool display_values) {
   resetScreen();
   if (!display_values) {
@@ -27,19 +37,38 @@ void updateScreen(bool display_values) {
   }
 }
 
-// printToScreen(): prints string to the Esp32 screen
+/**
+ * The printToScreen method prints a string to the ESP32 screen
+ * 
+ * @param s string to be printed to the screen
+ */
 void printToScreen(std::string s) { tft.println(getArduinoString(s)); }
 
-// printSensorToScreen(): prints a sensor value to the Esp32 screen
+/**
+ * The printSensorToScreen method prints a sensor value to the ESP32 screen
+ * 
+ * @param name name of the sensor
+ * @param value value of the sensor
+ */
 void printSensorToScreen(std::string name, uint8_t value) {
   tft.println(getArduinoString(name));
   tft.println(value);
 }
 
-// getArduinoString(): turns a std::string into an Arduino String
+/**
+ * The getArduinoString method turns a std::string into an Arduino String
+ * 
+ * @param str string to be converted
+ * @return String object representing inputted string
+ */
 String getArduinoString(std::string str) { return (String)str.c_str(); }
 
-// getLetterVector(): turns a std::string into an Arduino String vector
+/**
+ * The getLetterVector method turns a std::string into an Arduino String vector
+ * 
+ * @param str string to be converted
+ * @return String vector containing the characters of the inputted string
+ */
 std::vector<String> getLetterVector(std::string str) {
   std::vector<String> letters;
   for (int i = 0; i < str.size(); i++) {
@@ -48,18 +77,31 @@ std::vector<String> getLetterVector(std::string str) {
   return letters;
 }
 
-// randomColor(): outputs a random pastel RGB color
+/**
+ * The randomColor method outputs a random pastel RGB color
+ * 
+ * @return random RGB color
+ */
 inline uint16_t randomColor() {
   return getRGB(random(0, 255) / 2, random(0, 255) / 2, random(0, 255) / 2);
 }
 
-// getRGB(): converts an RGB value to an Arduino color value
-// https://stackoverflow.com/questions/13720937/c-defined-16bit-high-color
+/**
+ * The getRGB method converts an RGB value to an Arduino color value 
+ * 
+ * @param r red color intensity
+ * @param g green color intensity
+ * @param b blue color intensity
+ * @return Arduino color value representing the inputted RGB value
+ * @see https://stackoverflow.com/questions/13720937/c-defined-16bit-high-color
+ */
 inline uint16_t getRGB(uint8_t r, uint8_t g, uint8_t b) {
   return ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3);
 }
 
-// rainbowBackground(): makes the background a scrolling rainbow gradient
+/**
+ * The rainbowBackground method makes the background a scrolling rainbow gradient
+ */
 void rainbowBackground() {
   tft.setRotation(1);
   byte red = 31, green = 0, blue = 0, state = 0;

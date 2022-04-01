@@ -7,6 +7,12 @@
 
 #define JSON true /**< sends JSON data over serial connection not tagged */
 
+/**
+ * The SerialCommunication class defines the necessary features to send data across a serial connection
+ * 
+ * @author Sedona Thomas
+ * @version 1.0.0
+ */
 class SerialCommunication {
 protected:
   std::string name;

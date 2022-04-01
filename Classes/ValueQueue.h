@@ -6,6 +6,12 @@
 #include <list>
 #include <stdint.h>
 
+/**
+ * The ValueQueue class creates a queue of sensor values
+ * 
+ * @author Sedona Thomas
+ * @version 1.0.0
+ */
 class ValueQueue {
 private:
   std::list<uint8_t> values;

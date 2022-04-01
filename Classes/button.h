@@ -6,6 +6,12 @@
 
 #define BUTTON_DELAY 50 /**< delays button if defined */
 
+/**
+ * The Button class controls the necessary features of a button
+ * 
+ * @author Sedona Thomas
+ * @version 1.0.0
+ */
 class Button : public Sensor, public SerialCommunication {
 public:
   Button(){};

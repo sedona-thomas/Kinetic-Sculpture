@@ -7,6 +7,12 @@
 #define SECOND 1000  /**< miliseconds (1000 miliseconds : 1 second) */
 #define STEP_DELAY 3 /**< miliseconds */
 
+/**
+ * The StepMotor class controls the necessary features of a step motor
+ * 
+ * @author Sedona Thomas
+ * @version 1.0.0
+ */
 class StepMotor
 {
 public:

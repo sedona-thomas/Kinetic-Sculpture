@@ -1,5 +1,12 @@
 #include "potentiometer.h"
 
+/**
+ * Potentiometer constructor makes a potentiometer object
+ * 
+ * @param name_in the potentiometer name
+ * @param pin_in the pin that the potentiometer is connected to
+ * @param json_in boolean for whether the serial data is sent in a JSON format
+ */
 Potentiometer::Potentiometer(std::string name_in, int pin_in, bool json_in) {
   name = name_in;
   pin = pin_in;
@@ -7,6 +14,12 @@ Potentiometer::Potentiometer(std::string name_in, int pin_in, bool json_in) {
   json = json_in;
 }
 
+/**
+ * Potentiometer constructor makes a potentiometer object
+ * 
+ * @param pin_in the pin that the potentiometer is connected to
+ * @param json_in boolean for whether the serial data is sent in a JSON format
+ */
 Potentiometer::Potentiometer(int pin_in, bool json_in) {
   name = "";
   pin = pin_in;
@@ -14,7 +27,9 @@ Potentiometer::Potentiometer(int pin_in, bool json_in) {
   json = json_in;
 }
 
-// read(): reads potentiometer value
+/**
+ * The read method reads potentiometer value
+ */
 void Potentiometer::read() {
   values.add(analogRead(pin));
   value = values.median();
@@ -23,7 +38,9 @@ void Potentiometer::read() {
 #endif
 };
 
-// send(): sends data from peripheral over the serial connection
+/**
+ * The send method sends data from the potentiometer over the serial connection
+ */
 void Potentiometer::send() {
   read();
   sendSerialObject("potentiometer", value);

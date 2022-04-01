@@ -1,6 +1,8 @@
 #include "serial_communication.h"
 
-// send(): sends data from peripheral over the serial connection
+/**
+ * The send method sends data from peripheral over the serial connection
+ */
 void SerialCommunication::sendSerialObject(std::string sensor, uint8_t value) {
   if (json) {
     if (name.length() > 0) {
