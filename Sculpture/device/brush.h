@@ -16,7 +16,8 @@
 class BrushMotor
 {
 public:
-  BrushMotor(std::string, int);
+  BrushMotor(std::string, int, int, int, int);
+  BrushMotor(std::string, int, int, int);
   BrushMotor(std::string);
   BrushMotor();
   void setup();
