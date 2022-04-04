@@ -6,8 +6,7 @@
 Car::Car()
 {
   name = "car";
-  rightWheel = BrushMotor();
-  leftWheel = BrushMotor();
+  wheels = BrushMotor();
   flower = StepMotor();
   frontLeaves = ServoMotor();
   backLeaves = ServoMotor();
