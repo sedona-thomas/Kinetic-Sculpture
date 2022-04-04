@@ -116,14 +116,8 @@ void BrushMotor::driveMotor(boolean direction, int speed) {
  */
 void BrushMotor::rotate()
 {
-  rotationSpeed = potentiometerValue - 2048;
-  if (potentiometerValue > 2048) {
-    rotationDirection = true;
-  } else {
-    rotationDirection = false;
-  }
+  motorDirection();
   motorSpeed();
-  // Control the steering and speed of the motor
   driveMotor(rotationDirection, constrain(rotationSpeed, 0, 2048));
 }
 
@@ -133,9 +127,9 @@ void BrushMotor::rotate()
 void BrushMotor::rotateCounterclockwise()
 {
   if (READ_POTENTIOMETER) {
-    potentiometerValue = analogRead(A0);
+    potentiometerValue = analogRead(potentiometerPin);
   } else {
-    potentiometerValue = 2048 - 200;
+    potentiometerValue = 2048 - 1000;
   }
   rotate();
 }
@@ -146,35 +140,27 @@ void BrushMotor::rotateCounterclockwise()
 void BrushMotor::rotateClockwise()
 {
   if (READ_POTENTIOMETER) {
-    potentiometerValue = analogRead(A0);
+    potentiometerValue = analogRead(potentiometerPin);
   } else {
-    potentiometerValue = 2048 + 200;
+    potentiometerValue = 2048 + 1000;
   }
   rotate();
 }
 
 /**
- * The speed method calculates the current rotation speed
+ * The motorSpeed method calculates the current rotation speed
  */
 void BrushMotor::motorSpeed() {
   rotationSpeed = abs(potentiometerValue - 2048);
 }
 
-
-
-
-void loop() {
-  int potenVal = 100;
-  //analogRead(A0); // Convert the voltage of rotary potentiometer into digital
-  // Compare the number with value 2048,
-  // if more than 2048, clockwise rotates, otherwise, counter clockwise rotates
-  rotationSpeed = potenVal - 2048;
-  if (potenVal > 2048)
+/**
+ * The motorDirection method calculates the current rotation direction
+ */
+void BrushMotor::motorDirection() {
+  if (potentiometerValue > 2048) {
     rotationDirection = true;
-  else
+  } else {
     rotationDirection = false;
-  // Calculate the motor speed
-  rotationSpeed = abs(potenVal - 2048);
-  // Control the steering and speed of the motor
-  driveMotor(rotationDirection, constrain(rotationSpeed, 0, 2048));
+  }
 }

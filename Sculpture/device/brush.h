@@ -1,11 +1,10 @@
 #ifndef __BRUSH_H__
 #define __BRUSH_H__
 
-#include <Arduino.h>
-
+//#include <Arduino.h>
 #include <cmath>
 
-#define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
+#define SECOND 1000              /**< miliseconds (1000 miliseconds : 1 second) */
 #define READ_POTENTIOMETER false /**< whether or not a potentiometer is connected */
 
 /**
@@ -26,10 +25,12 @@ public:
   void rotateClockwise();
   void rotateCounterclockwise();
   void motorSpeed();
+  void motorDirection();
 
 private:
   std::string name;
   int ports[3]; /**< Ports use GPOI pins {12, 15, 13} by default */
+  int potentiometerPin;
   int channel;
   int potentiometerValue;
   int rotationSpeed;

@@ -4,6 +4,8 @@
 #include <Arduino.h>
 #include <ESP32Servo.h>
 #include <cmath>
+#include <string>
+#include <stdint.h>
 
 #define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
 #define SERVO_DELAY 15 /**< miliseconds */

@@ -3,6 +3,8 @@
 
 #include <Arduino.h>
 #include <cmath>
+#include <string>
+#include <stdint.h>
 
 #define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
 
