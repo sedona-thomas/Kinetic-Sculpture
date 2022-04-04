@@ -10,6 +10,7 @@
 #include "brush.h"
 
 #define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
+#define SEPARATE_WHEELS false /**< whether wheels are controlled individually */
 
 /**
  * The Car class controls the car and flower
@@ -27,8 +28,12 @@ public:
 
 private:
   std::string name;
+#if SEPARATE_WHEELS
   BrushMotor rightWheel;
   BrushMotor leftWheel;
+#else
+  BrushMotor wheels;
+#endif
   StepMotor flower;
   ServoMotor frontLeaves;
   ServoMotor backLeaves;
