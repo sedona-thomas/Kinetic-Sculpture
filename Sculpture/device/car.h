@@ -4,8 +4,7 @@
 #include <Arduino.h>
 #include <cmath>
 
-#define SECOND 1000  /**< miliseconds (1000 miliseconds : 1 second) */
-#define STEP_DELAY 3 /**< miliseconds */
+#define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
 
 /**
  * The Car class controls the car and flower
@@ -17,6 +16,7 @@ class Car
 {
 public:
   Car();
+  Car(std::string);
   void setup();
   void run();
 

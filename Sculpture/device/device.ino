@@ -9,9 +9,8 @@
 #define BAUDRATE 115200      /**< baudrate for serial communications */
 #define DISPLAY_VALUES false /**< true: sensors; false: rainbow background */
 
-#include <SPI.h>
-#include <TFT_eSPI.h>
 #include "esp32_screen.h"
+#include "car.h"
 
 void setupSerial() {
   Serial.begin(BAUDRATE);
@@ -19,7 +18,7 @@ void setupSerial() {
 }
 
 void test() {
-  
+
 }
 
 void testingLoop() {
