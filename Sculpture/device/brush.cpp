@@ -101,7 +101,7 @@ void BrushMotor::test()
  * The rotate method rotates the brush motor
  */
 void BrushMotor::driveMotor(boolean direction, int speed) {
-  if (dirextion) {
+  if (direction) {
     digitalWrite(in1Pin, HIGH);
     digitalWrite(in2Pin, LOW);
   } else {
