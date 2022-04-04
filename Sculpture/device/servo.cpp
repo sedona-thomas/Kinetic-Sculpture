@@ -6,7 +6,7 @@
 ServoMotor::ServoMotor()
 {
   name = "servo";
-  port = 15;
+  port = 2;
 }
 
 /**
@@ -17,7 +17,7 @@ ServoMotor::ServoMotor()
 ServoMotor::ServoMotor(std::string _name)
 {
   name = _name;
-  port = 15;
+  port = 2;
 }
 
 /**

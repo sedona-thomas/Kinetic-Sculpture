@@ -7,8 +7,9 @@ BrushMotor::BrushMotor()
 {
   name = "brush";
   ports[0] = 12;
-  ports[1] = 14;
+  ports[1] = 15;
   ports[2] = 13;
+  channel = 0;
 }
 
 /**
@@ -20,8 +21,9 @@ BrushMotor::BrushMotor(std::string _name)
 {
   name = _name;
   ports[0] = 12;
-  ports[1] = 14;
+  ports[1] = 15;
   ports[2] = 13;
+  channel = 0;
 }
 
 /**
@@ -38,6 +40,24 @@ BrushMotor::BrushMotor(std::string _name, int inPin1, int inPin2, int enablePin)
   ports[0] = inPin1;
   ports[1] = inPin2;
   ports[2] = enablePin;
+}
+
+/**
+ * BrushMotor constructor makes a brush object
+ * 
+ * @param name_in the brush motor name
+ * @param inPin1 the pin that the in driver 1 pin is connected to
+ * @param inPin2 the pin that the in driver 2 pin is connected to
+ * @param enablePin the pin that the enable driver 1 pin is connected to
+ * @param _channel the channel
+ */
+BrushMotor::BrushMotor(std::string _name, int inPin1, int inPin2, int enablePin, int _channel)
+{
+  name = _name;
+  ports[0] = inPin1;
+  ports[1] = inPin2;
+  ports[2] = enablePin;
+  channel = _channel;
 }
 
 /**

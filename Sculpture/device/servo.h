@@ -32,7 +32,7 @@ public:
 private:
   std::string name;
   Servo motor;
-  int port; /**< Port uses GPOI pin 15 by default */
+  int port; /**< Port uses GPOI pin 2 by default */
   int angle;
 };
 
