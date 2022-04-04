@@ -18,6 +18,16 @@ void setupSerial() {
   delay(1000);
 }
 
+void test() {
+  
+}
+
+void testingLoop() {
+  updateScreen(DISPLAY_VALUES);
+  test();
+  delay(FRAMERATE);
+}
+
 void setup() {
   setupSerial();
   setupScreen();
@@ -25,7 +35,5 @@ void setup() {
 }
 
 void loop() {
-  // updateScreen(DISPLAY_VALUES);
-
-  // delay(FRAMERATE);
+  
 }
