@@ -96,7 +96,7 @@ void BrushMotor::test()
 {
   rotateClockwise();
   delay(10 * SECOND);
-  rotateCounterClockwise();
+  rotateCounterclockwise();
   delay(10 * SECOND);
   reset();
 }

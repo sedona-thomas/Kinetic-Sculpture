@@ -5,6 +5,9 @@
 #include <cmath>
 #include <string>
 #include <stdint.h>
+#include "servo.h"
+#include "step.h"
+#include "brush.h"
 
 #define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
 

@@ -1,8 +1,10 @@
 #ifndef __BRUSH_H__
 #define __BRUSH_H__
 
-//#include <Arduino.h>
+#include <Arduino.h>
 #include <cmath>
+#include <string>
+#include <stdint.h>
 
 #define SECOND 1000              /**< miliseconds (1000 miliseconds : 1 second) */
 #define READ_POTENTIOMETER false /**< whether or not a potentiometer is connected */
@@ -23,6 +25,8 @@ public:
   void setup();
   void reset();
   void test();
+  void driveMotor(boolean, int);
+  void rotate();
   void rotateClockwise();
   void rotateCounterclockwise();
   void motorSpeed();
