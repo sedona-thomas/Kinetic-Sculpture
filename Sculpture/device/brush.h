@@ -27,7 +27,7 @@ public:
 
 private:
   std::string name;
-  int port; /**< Port uses GPOI pin 15 by default */
+  int ports[3]; /**< Ports use GPOI pins {13, 12, 14} by default */
 };
 
 #endif
