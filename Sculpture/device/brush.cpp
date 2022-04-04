@@ -102,7 +102,7 @@ void BrushMotor::test()
 }
 
 /**
- * The rotate method rotates the brush motor
+ * The driveMotor method rotates the brush motor
  */
 void BrushMotor::driveMotor(bool direction, int speed) {
   if (direction) {
@@ -113,6 +113,17 @@ void BrushMotor::driveMotor(bool direction, int speed) {
     digitalWrite(ports[1], HIGH);
   }
   ledcWrite(channel, speed);
+}
+
+/**
+ * The drive method rotates the brush motor at the given speed
+ */
+void BrushMotor::drive(int speed)
+{
+  potentiometerValue = 2048 + speed;
+  motorDirection();
+  motorSpeed();
+  driveMotor(rotationDirection, constrain(rotationSpeed, 0, 2048));
 }
 
 /**

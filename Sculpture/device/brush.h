@@ -26,6 +26,7 @@ public:
   void reset();
   void test();
   void driveMotor(bool, int);
+  void drive(int);
   void rotate();
   void rotateClockwise();
   void rotateCounterclockwise();
