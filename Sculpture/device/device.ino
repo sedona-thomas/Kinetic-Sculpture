@@ -21,7 +21,7 @@ void setupSerial() {
 void setup() {
   setupSerial();
   setupScreen();
-  // updateScreen(DISPLAY_VALUES);
+  updateScreen(DISPLAY_VALUES);
 }
 
 void loop() {
