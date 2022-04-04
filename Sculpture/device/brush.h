@@ -25,7 +25,7 @@ public:
   void setup();
   void reset();
   void test();
-  void driveMotor(boolean, int);
+  void driveMotor(bool, int);
   void rotate();
   void rotateClockwise();
   void rotateCounterclockwise();
@@ -39,7 +39,7 @@ private:
   int channel;
   int potentiometerValue;
   int rotationSpeed;
-  int rotationDirection;
+  bool rotationDirection;
 };
 
 #endif

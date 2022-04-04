@@ -39,6 +39,8 @@ void updateScreen(bool display_values) {
   resetScreen();
   if (!display_values) {
     rainbowBackground();
+  } else {
+    randomBackground();
   }
 }
 
@@ -102,6 +104,14 @@ inline uint16_t randomColor() {
  */
 inline uint16_t getRGB(uint8_t r, uint8_t g, uint8_t b) {
   return ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3);
+}
+
+/**
+ * The randomBackground method makes the background a random color
+ */
+void randomBackground() {
+  currentBackgroundColor = randomColor();
+  resetScreen();
 }
 
 /**

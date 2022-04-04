@@ -104,13 +104,13 @@ void BrushMotor::test()
 /**
  * The rotate method rotates the brush motor
  */
-void BrushMotor::driveMotor(boolean direction, int speed) {
+void BrushMotor::driveMotor(bool direction, int speed) {
   if (direction) {
-    digitalWrite(in1Pin, HIGH);
-    digitalWrite(in2Pin, LOW);
+    digitalWrite(ports[0], HIGH);
+    digitalWrite(ports[1], LOW);
   } else {
-    digitalWrite(in1Pin, LOW);
-    digitalWrite(in2Pin, HIGH);
+    digitalWrite(ports[0], LOW);
+    digitalWrite(ports[1], HIGH);
   }
   ledcWrite(channel, speed);
 }

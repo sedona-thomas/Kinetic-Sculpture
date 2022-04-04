@@ -28,7 +28,7 @@ void test() {
 }
 
 void testingLoop() {
-  updateScreen(DISPLAY_VALUES);
+  updateScreen(true);//DISPLAY_VALUES);
   test();
   delay(FRAMERATE);
 }
@@ -40,5 +40,5 @@ void setup() {
 }
 
 void loop() {
-  test();
+  testingLoop();
 }

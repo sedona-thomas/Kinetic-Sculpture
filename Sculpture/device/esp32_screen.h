@@ -25,6 +25,7 @@ String getArduinoString(std::string str);
 std::vector<String> getLetterVector(std::string str);
 inline uint16_t randomColor();
 inline uint16_t getRGB(uint8_t r, uint8_t g, uint8_t b);
+void randomBackground();
 void rainbowBackground();
 
 #endif
