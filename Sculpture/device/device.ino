@@ -9,6 +9,8 @@
 #define BAUDRATE 115200      /**< baudrate for serial communications */
 #define DISPLAY_VALUES false /**< true: sensors; false: rainbow background */
 
+#include <SPI.h>
+#include <TFT_eSPI.h>
 #include "esp32_screen.h"
 
 void setupSerial() {
@@ -19,8 +21,11 @@ void setupSerial() {
 void setup() {
   setupSerial();
   setupScreen();
-  updateScreen(DISPLAY_VALUES);
+  // updateScreen(DISPLAY_VALUES);
 }
 
 void loop() {
+  // updateScreen(DISPLAY_VALUES);
+
+  // delay(FRAMERATE);
 }

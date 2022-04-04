@@ -16,11 +16,6 @@
 #define WAIT 500     /**< miliseconds */
 #define FRAMERATE 50 /**< miliseconds */
 
-TFT_eSPI tft = TFT_eSPI(); /**< defines TFT screen object */
-uint32_t currentBackgroundColor = TFT_WHITE; /**< defines current background color */
-uint32_t currentTextColor = TFT_BLACK; /**< defines current text color */
-uint8_t currentTextSize = 1; /**< defines current text size (1 size value == 10 pixels) */
-
 void setupScreen();
 void resetScreen();
 void updateScreen(bool display_values);
