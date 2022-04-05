@@ -75,37 +75,17 @@ void Car::setup()
  */
 void Car::run()
 {
-  printToScreen("running");
-
 #if SEPARATE_WHEELS
   // TODO: write handler for separate wheels
 #else
-  wheels.drive(1000);
+  wheels.drive(2000);
   delay(5 * SECOND);
 #endif
-
-  printToScreen("drove");
-
   flower.moveAround(true, 1, 3);
-
-  printToScreen("moved flower");
-
 #if SEPARATE_LEAVES
   // TODO: write handler for separate leaves
 #else
-  // leaves.moveTo(180);
-
-  leaves.rotateCounterclockwise(180);
-
-  printToScreen("one way");
-
-  leaves.rotateClockwise(180);
-
-  // leaves.moveTo(0);
-
-  printToScreen("other way\nmoved leaves");
-
+  leaves.moveTo(180);
+  leaves.moveTo(0);
 #endif
-
-  printToScreen("endRun");
 }
