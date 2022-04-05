@@ -7,19 +7,33 @@
 
 #define BAUDRATE 115200      /**< baudrate for serial communications */
 #define DISPLAY_VALUES false /**< true: sensors; false: rainbow background */
+#define TESTING_MOTORS true  /**< whether motors are being tested */
 
 #include "esp32_screen.h"
-//#include "car.h"
+#include "car.h"
 
-//#include "step.h"
+Car car = Car();
+
+#if TESTING_MOTORS
+#include "step.h"
 #include "servo.h"
-//#include "brush.h"
-
-// Car car = Car();
-
-// StepMotor step = StepMotor("flower", 33, 25, 26, 27);
+#include "brush.h"
+StepMotor step = StepMotor("flower", 33, 25, 26, 27);
 ServoMotor servo = ServoMotor("leaves", 2);
-// BrushMotor brush = BrushMotor();
+BrushMotor brush = BrushMotor();
+void setupMotors()
+{
+  step.setup();
+  servo.setup();
+  brush.setup();
+}
+void testMotors()
+{
+  step.test();
+  servo.test();
+  brush.test();
+}
+#endif
 
 void setupSerial()
 {
@@ -29,12 +43,7 @@ void setupSerial()
 
 void test()
 {
-  // car.run();
-  printToScreen("testing");
-  // step.test();
-  servo.test();
-  // brush.test();
-  printToScreen("endTesting");
+  car.run();
 }
 
 void testingLoop()
@@ -48,12 +57,13 @@ void setup()
 {
   setupSerial();
   setupScreen();
-  servo.setup();
+  // car.setup();
+  setupMotors();
   updateScreen(DISPLAY_VALUES);
 }
 
 void loop()
 {
-  test();
+  testMotors();
   delay(1000);
 }
