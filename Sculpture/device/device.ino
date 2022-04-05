@@ -7,7 +7,7 @@
 
 #define BAUDRATE 115200      /**< baudrate for serial communications */
 #define DISPLAY_VALUES false /**< true: sensors; false: rainbow background */
-#define TESTING_MOTORS true  /**< whether motors are being tested */
+#define TESTING_MOTORS false /**< whether motors are being tested */
 
 #include "esp32_screen.h"
 #include "car.h"
@@ -29,11 +29,9 @@ void setupMotors()
 }
 void testMotors()
 {
-  // step.test();
-  // servo.test();
-  // brush.test();
-  brush.drive(1000);
-  delay(1000 * 5);
+  step.test();
+  servo.test();
+  brush.test();
 }
 #endif
 
@@ -43,29 +41,16 @@ void setupSerial()
   delay(1000);
 }
 
-void test()
-{
-  car.run();
-}
-
-void testingLoop()
-{
-  updateScreen(true);
-  test();
-  // delay(FRAMERATE);
-}
-
 void setup()
 {
   setupSerial();
   setupScreen();
-  // car.setup();
-  setupMotors();
+  car.setup();
   updateScreen(DISPLAY_VALUES);
 }
 
 void loop()
 {
-  testMotors();
-  delay(1000);
+  updateScreen(DISPLAY_VALUES);
+  car.run();
 }
