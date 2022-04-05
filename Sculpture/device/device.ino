@@ -20,7 +20,7 @@ Car car = Car();
 #include "brush.h"
 StepMotor step = StepMotor("flower", 33, 25, 26, 27);
 ServoMotor servo = ServoMotor("leaves", 2);
-BrushMotor brush = BrushMotor();
+BrushMotor brush = BrushMotor("wheels", 12, 15, 13);
 void setupMotors()
 {
   step.setup();
@@ -29,9 +29,11 @@ void setupMotors()
 }
 void testMotors()
 {
-  step.test();
-  servo.test();
-  brush.test();
+  // step.test();
+  // servo.test();
+  // brush.test();
+  brush.drive(1000);
+  delay(1000 * 5);
 }
 #endif
 
