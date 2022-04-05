@@ -68,7 +68,9 @@ void Car::run()
   // TODO: write handler for separate leaves
 #else
   leaves.moveTo(180);
+  printToScreen("one way");
   leaves.moveTo(0);
+  printToScreen("other way\nmoved leaves");
 #endif
   printToScreen("endRun");
 }
