@@ -10,6 +10,8 @@ void wifiSetup()
     setupScreen();
     updateScreen(true);
     car.setup();
+    delay(1000 * 5);
+
     USE_SERIAL.begin(115200);
     WiFi.begin(ssid_Router, password_Router);
     USE_SERIAL.println(String("Connecting to ") + ssid_Router);
