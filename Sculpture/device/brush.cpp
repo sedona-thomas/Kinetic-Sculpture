@@ -103,6 +103,9 @@ void BrushMotor::test()
 
 /**
  * The driveMotor method rotates the brush motor
+ * 
+ * @param direction whether the direction is forward
+ * @param speed the speed of the motor (range 0-2048)
  */
 void BrushMotor::driveMotor(bool direction, int speed) {
   if (direction) {
@@ -117,6 +120,8 @@ void BrushMotor::driveMotor(bool direction, int speed) {
 
 /**
  * The drive method rotates the brush motor at the given speed
+ * 
+ * @param speed the speed of the motor (range 0-2048)
  */
 void BrushMotor::drive(int speed)
 {
