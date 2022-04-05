@@ -26,6 +26,7 @@ class Car
 public:
   Car();
   Car(std::string);
+  void setup();
   void run();
 
 private:

@@ -49,6 +49,28 @@ Car::Car(std::string _name)
 }
 
 /**
+ * The setup method sets up the car
+ */
+void Car::setup()
+{
+#if SEPARATE_WHEELS
+  // TODO: specify pins for separate wheeks
+  rightWheel.setup();
+  leftWheel.setup();
+#else
+  wheels.setup();
+#endif
+  flower.setup();
+#if SEPARATE_LEAVES
+  // TODO: specify pins for separate leaves
+  frontLeaves.setup();
+  backLeaves.setup();
+#else
+  leaves.setup();
+#endif
+}
+
+/**
  * The run method runs the car
  */
 void Car::run()
