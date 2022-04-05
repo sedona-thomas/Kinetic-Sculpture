@@ -7,7 +7,6 @@ Car::Car()
 {
   name = "car";
 #if SEPARATE_WHEELS
-  // TODO: specify pins for separate wheeks
   rightWheel = BrushMotor("right wheel", 12, 15, 13);
   leftWheel = BrushMotor("left wheel", 12, 15, 13);
 #else
@@ -32,15 +31,13 @@ Car::Car(std::string _name)
 {
   name = _name;
 #if SEPARATE_WHEELS
-  // TODO: specify pins for separate wheeks
-  rightWheel = BrushMotor();
-  leftWheel = BrushMotor();
+  rightWheel = BrushMotor("right wheel", 12, 15, 13);
+  leftWheel = BrushMotor("left wheel", 36, 37, 38);
 #else
-  wheels = BrushMotor("flower", 33, 25, 26, 27);
+  wheels = BrushMotor("wheels", 12, 15, 13);
 #endif
-  flower = StepMotor();
+  flower = StepMotor("flower", 33, 25, 26, 27);
 #if SEPARATE_LEAVES
-  // TODO: specify pins for separate leaves
   frontLeaves = ServoMotor("front leaves", 1);
   backLeaves = ServoMotor("back leaves", 2);
 #else
@@ -54,7 +51,6 @@ Car::Car(std::string _name)
 void Car::setup()
 {
 #if SEPARATE_WHEELS
-  // TODO: specify pins for separate wheeks
   rightWheel.setup();
   leftWheel.setup();
 #else
@@ -62,7 +58,6 @@ void Car::setup()
 #endif
   flower.setup();
 #if SEPARATE_LEAVES
-  // TODO: specify pins for separate leaves
   frontLeaves.setup();
   backLeaves.setup();
 #else
@@ -76,16 +71,19 @@ void Car::setup()
 void Car::run()
 {
 #if SEPARATE_WHEELS
-  // TODO: write handler for separate wheels
+  rightWheel.drive(2000);
+  leftWheel.drive(2000);
+  delay(2 * SECOND);
 #else
-  printToScreen("driving");
   wheels.drive(2000);
-  delay(5 * SECOND);
-  printToScreen("driving done");
+  delay(2 * SECOND);
 #endif
   flower.moveAround(true, 1, 3);
 #if SEPARATE_LEAVES
-  // TODO: write handler for separate leaves
+  frontLeaves.moveTo(180);
+  frontLeaves.moveTo(0);
+  backLeaves.moveTo(180);
+  backLeaves.moveTo(0);
 #else
   leaves.moveTo(180);
   leaves.moveTo(0);
