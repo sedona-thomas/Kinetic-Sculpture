@@ -75,12 +75,14 @@ void Car::setup()
  */
 void Car::run()
 {
-  // #if SEPARATE_WHEELS
-  //   // TODO: write handler for separate wheels
-  // #else
-  //   wheels.drive(2000);
-  //   delay(5 * SECOND);
-  // #endif
+#if SEPARATE_WHEELS
+  // TODO: write handler for separate wheels
+#else
+  printToScreen("driving");
+  wheels.drive(2000);
+  delay(5 * SECOND);
+  printToScreen("driving done");
+#endif
   flower.moveAround(true, 1, 3);
 #if SEPARATE_LEAVES
   // TODO: write handler for separate leaves
