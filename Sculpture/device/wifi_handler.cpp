@@ -1,5 +1,10 @@
 #include "wifi_handler.h"
 
+const char *ssid_Router = "Columbia U Secure"; /**< router name */
+const char *password_Router = "";              /**< router password */
+String address = "http://134.122.113.13/snt2127/running";
+Car car = Car();
+
 void wifiSetup()
 {
     car.setup();
@@ -29,11 +34,12 @@ void wifiLoop()
             String response = http.getString();
             if (response.equals("false"))
             {
-                // Do not run sculpture, perhaps sleep for a couple seconds
+                randomBackground()
             }
             else if (response.equals("true"))
             {
-                car.run();
+                rainbowBackground()
+                    car.run();
             }
             USE_SERIAL.println("Response was: " + response);
         }
