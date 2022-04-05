@@ -7,7 +7,7 @@
 #include <stdint.h>
 
 #define SECOND 1000  /**< miliseconds (1000 miliseconds : 1 second) */
-#define STEP_DELAY 3 /**< miliseconds */
+#define STEP_DELAY 5 /**< miliseconds */
 
 /**
  * The StepMotor class controls the necessary features of a step motor
