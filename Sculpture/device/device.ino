@@ -19,7 +19,7 @@ Car car = Car();
 
 StepMotor step = StepMotor();
 ServoMotor servo = ServoMotor();
-BrushMotor brush = BrushMotor();
+// BrushMotor brush = BrushMotor();
 
 void setupSerial()
 {
@@ -32,7 +32,7 @@ void test()
   // car.run();
   step.test();
   servo.test();
-  brush.test();
+  // brush.test();
 }
 
 void testingLoop()
