@@ -9,7 +9,7 @@
 #define DISPLAY_VALUES false /**< true: sensors; false: rainbow background */
 
 #include "esp32_screen.h"
-#include "car.h"
+//#include "car.h"
 
 #include "step.h"
 #include "servo.h"
@@ -17,8 +17,8 @@
 
 Car car = Car();
 
-StepMotor step = StepMotor();
-ServoMotor servo = ServoMotor();
+StepMotor step = StepMotor("flower", 33, 25, 26, 27);
+// ServoMotor servo = ServoMotor();
 // BrushMotor brush = BrushMotor();
 
 void setupSerial()
@@ -30,9 +30,11 @@ void setupSerial()
 void test()
 {
   // car.run();
+  printToScreen("testing");
   step.test();
-  servo.test();
+  // servo.test();
   // brush.test();
+  printToScreen("endTesting");
 }
 
 void testingLoop()
@@ -51,5 +53,5 @@ void setup()
 
 void loop()
 {
-  testingLoop();
+  test();
 }
