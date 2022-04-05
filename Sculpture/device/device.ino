@@ -11,14 +11,14 @@
 #include "esp32_screen.h"
 //#include "car.h"
 
-#include "step.h"
-//#include "servo.h"
+//#include "step.h"
+#include "servo.h"
 //#include "brush.h"
 
 // Car car = Car();
 
 // StepMotor step = StepMotor("flower", 33, 25, 26, 27);
-ServoMotor servo = ServoMotor();
+ServoMotor servo = ServoMotor(2);
 // BrushMotor brush = BrushMotor();
 
 void setupSerial()
