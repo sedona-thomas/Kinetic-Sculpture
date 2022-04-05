@@ -8,10 +8,10 @@ Car::Car()
   name = "car";
 #if SEPARATE_WHEELS
   // TODO: specify pins for separate wheeks
-  rightWheel = BrushMotor();
-  leftWheel = BrushMotor();
+  rightWheel = BrushMotor("right wheel", 12, 15, 13);
+  leftWheel = BrushMotor("left wheel", 12, 15, 13);
 #else
-  wheels = BrushMotor();
+  wheels = BrushMotor("wheels", 12, 15, 13);
 #endif
   flower = StepMotor("flower", 33, 25, 26, 27);
 #if SEPARATE_LEAVES
