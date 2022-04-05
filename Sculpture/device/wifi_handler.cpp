@@ -7,6 +7,7 @@ Car car = Car();
 
 void wifiSetup()
 {
+    setupScreen();
     car.setup();
     USE_SERIAL.begin(115200);
     WiFi.begin(ssid_Router, password_Router);
@@ -24,12 +25,12 @@ void wifiSetup()
 void wifiLoop()
 {
     printToScreen("loop");
-
+    randomBackground();
+    delay(1000 * 3);
     if ((WiFi.status() == WL_CONNECTED))
     {
         HTTPClient http;
         http.begin(address);
-
         int httpCode = http.GET(); // start connection and send HTTP header
         if (httpCode == HTTP_CODE_OK)
         {
@@ -37,11 +38,13 @@ void wifiLoop()
             if (response.equals("false"))
             {
                 randomBackground();
+                delay(SECOND * 5);
             }
             else if (response.equals("true"))
             {
                 rainbowBackground();
                 car.run();
+                delay(SECOND * 5);
             }
             USE_SERIAL.println("Response was: " + response);
         }
