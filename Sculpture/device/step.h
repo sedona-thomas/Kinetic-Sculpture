@@ -11,7 +11,7 @@
 
 /**
  * The StepMotor class controls the necessary features of a step motor
- * 
+ *
  * @author Sedona Thomas
  * @version 1.0.0
  */

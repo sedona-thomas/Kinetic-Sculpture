@@ -11,7 +11,7 @@
 
 /**
  * The BrushMotor class controls the necessary features of a DC brush motor
- * 
+ *
  * @author Sedona Thomas
  * @version 1.0.0
  */

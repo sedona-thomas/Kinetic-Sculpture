@@ -14,7 +14,7 @@ StepMotor::StepMotor()
 
 /**
  * StepMotor constructor makes a step motor object
- * 
+ *
  * @param name_in the step motor name
  */
 StepMotor::StepMotor(std::string _name)
@@ -28,7 +28,7 @@ StepMotor::StepMotor(std::string _name)
 
 /**
  * StepMotor constructor makes a step object
- * 
+ *
  * @param name_in the step motor name
  * @param in1 the pin that the step motor in1 is connected to
  * @param in2 the pin that the step motor in2 is connected to
@@ -68,7 +68,7 @@ void StepMotor::test()
 
 /**
  * The moveSteps method moves the specified number of steps in the specified direction
- * 
+ *
  * @param dir direction to move (true if clockwise else false)
  * @param steps number of steps to move
  * @param ms miliseconds to delay between rotation steps
@@ -84,7 +84,7 @@ void StepMotor::moveSteps(bool dir, int steps, byte ms)
 
 /**
  * The moveOneStep method moves one step in the specified direction
- * 
+ *
  * @param dir direction to move (true if clockwise else false)
  */
 void StepMotor::moveOneStep(bool dir)
@@ -106,7 +106,7 @@ void StepMotor::moveOneStep(bool dir)
 
 /**
  * The moveAround method moves full rotations at a controlled speed
- * 
+ *
  * @param dir direction to move (true if clockwise else false)
  * @param turns number of full rotations to make
  * @param ms miliseconds to delay between rotation steps
@@ -119,7 +119,7 @@ void StepMotor::moveAround(bool dir, int turns, byte ms)
 
 /**
  * The moveAngle method moves the step motor by the specified angle
- * 
+ *
  * @param dir direction to move (true if clockwise else false)
  * @param angle angle by which to turn
  * @param ms miliseconds to delay between rotation steps

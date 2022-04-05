@@ -15,7 +15,7 @@ BrushMotor::BrushMotor()
 
 /**
  * BrushMotor constructor makes a brush motor object
- * 
+ *
  * @param name_in the brush motor name
  */
 BrushMotor::BrushMotor(std::string _name)
@@ -30,7 +30,7 @@ BrushMotor::BrushMotor(std::string _name)
 
 /**
  * BrushMotor constructor makes a brush object
- * 
+ *
  * @param name_in the brush motor name
  * @param inPin1 the pin that the L293D channel 1 pin is connected to
  * @param inPin2 the pin that the L293D channel 2 pin is connected to
@@ -47,7 +47,7 @@ BrushMotor::BrushMotor(std::string _name, int inPin1, int inPin2, int enablePin)
 
 /**
  * BrushMotor constructor makes a brush object
- * 
+ *
  * @param name_in the brush motor name
  * @param inPin1 the pin that the L293D channel 1 pin is connected to
  * @param inPin2 the pin that the L293D channel 2 pin is connected to
@@ -66,7 +66,7 @@ BrushMotor::BrushMotor(std::string _name, int inPin1, int inPin2, int enablePin,
 
 /**
  * The setup method sets up a brush motor
- * 
+ *
  * ledcAttachPin() sets pulse width modulation to 11 bits (range 0-2047)
  */
 void BrushMotor::setup()
@@ -74,7 +74,7 @@ void BrushMotor::setup()
   pinMode(ports[0], OUTPUT);
   pinMode(ports[1], OUTPUT);
   pinMode(ports[2], OUTPUT);
-  ledcSetup(channel, 1000, 11); 
+  ledcSetup(channel, 1000, 11);
   ledcAttachPin(ports[2], channel);
   reset();
 }
@@ -103,15 +103,19 @@ void BrushMotor::test()
 
 /**
  * The driveMotor method rotates the brush motor
- * 
+ *
  * @param direction whether the direction is forward
  * @param speed the speed of the motor (range 0-2048)
  */
-void BrushMotor::driveMotor(bool direction, int speed) {
-  if (direction) {
+void BrushMotor::driveMotor(bool direction, int speed)
+{
+  if (direction)
+  {
     digitalWrite(ports[0], HIGH);
     digitalWrite(ports[1], LOW);
-  } else {
+  }
+  else
+  {
     digitalWrite(ports[0], LOW);
     digitalWrite(ports[1], HIGH);
   }
@@ -120,7 +124,7 @@ void BrushMotor::driveMotor(bool direction, int speed) {
 
 /**
  * The drive method rotates the brush motor at the given speed
- * 
+ *
  * @param speed the speed of the motor (range 0-2048)
  */
 void BrushMotor::drive(int speed)
@@ -146,9 +150,12 @@ void BrushMotor::rotate()
  */
 void BrushMotor::rotateCounterclockwise()
 {
-  if (READ_POTENTIOMETER) {
+  if (READ_POTENTIOMETER)
+  {
     potentiometerValue = analogRead(potentiometerPin);
-  } else {
+  }
+  else
+  {
     potentiometerValue = 2048 - 1000;
   }
   rotate();
@@ -159,9 +166,12 @@ void BrushMotor::rotateCounterclockwise()
  */
 void BrushMotor::rotateClockwise()
 {
-  if (READ_POTENTIOMETER) {
+  if (READ_POTENTIOMETER)
+  {
     potentiometerValue = analogRead(potentiometerPin);
-  } else {
+  }
+  else
+  {
     potentiometerValue = 2048 + 1000;
   }
   rotate();
@@ -170,17 +180,22 @@ void BrushMotor::rotateClockwise()
 /**
  * The motorSpeed method calculates the current rotation speed
  */
-void BrushMotor::motorSpeed() {
+void BrushMotor::motorSpeed()
+{
   rotationSpeed = abs(potentiometerValue - 2048);
 }
 
 /**
  * The motorDirection method calculates the current rotation direction
  */
-void BrushMotor::motorDirection() {
-  if (potentiometerValue > 2048) {
+void BrushMotor::motorDirection()
+{
+  if (potentiometerValue > 2048)
+  {
     rotationDirection = true;
-  } else {
+  }
+  else
+  {
     rotationDirection = false;
   }
 }

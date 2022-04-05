@@ -7,12 +7,12 @@
 #include <string>
 #include <stdint.h>
 
-#define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
-#define SERVO_DELAY 15 /**< miliseconds */
+#define SECOND 1000   /**< miliseconds (1000 miliseconds : 1 second) */
+#define SERVO_DELAY 5 /**< miliseconds */
 
 /**
  * The ServoMotor class controls the necessary features of a Servo motor
- * 
+ *
  * @author Sedona Thomas
  * @version 1.0.0
  */

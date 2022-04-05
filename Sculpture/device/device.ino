@@ -1,6 +1,6 @@
 /**
  * The device.ino file manages the functionality of the ESP32
- * 
+ *
  * @author Sedona Thomas
  * @version 1.0.0
  */
@@ -13,27 +13,32 @@
 
 Car car = Car();
 
-void setupSerial() {
+void setupSerial()
+{
   Serial.begin(BAUDRATE);
   delay(1000);
 }
 
-void test() {
+void test()
+{
   car.run();
 }
 
-void testingLoop() {
+void testingLoop()
+{
   updateScreen(true);
   test();
-  //delay(FRAMERATE);
+  // delay(FRAMERATE);
 }
 
-void setup() {
+void setup()
+{
   setupSerial();
   setupScreen();
   updateScreen(DISPLAY_VALUES);
 }
 
-void loop() {
+void loop()
+{
   testingLoop();
 }

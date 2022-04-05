@@ -1,6 +1,6 @@
 /**
  * The esp32 header file handles an ESP TFT display
- * 
+ *
  * @author Sedona Thomas
  * @version 1.0.0
  */

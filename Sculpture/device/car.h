@@ -11,13 +11,13 @@
 
 #include "esp32_screen.h"
 
-#define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
+#define SECOND 1000           /**< miliseconds (1000 miliseconds : 1 second) */
 #define SEPARATE_WHEELS false /**< whether wheels are controlled individually */
 #define SEPARATE_LEAVES false /**< whether leaves are controlled individually */
 
 /**
  * The Car class controls the car and flower
- * 
+ *
  * @author Sedona Thomas
  * @version 1.0.0
  */
