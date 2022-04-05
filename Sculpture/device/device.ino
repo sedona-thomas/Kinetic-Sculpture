@@ -25,7 +25,7 @@ void test() {
 void testingLoop() {
   updateScreen(true);
   test();
-  delay(FRAMERATE);
+  //delay(FRAMERATE);
 }
 
 void setup() {
