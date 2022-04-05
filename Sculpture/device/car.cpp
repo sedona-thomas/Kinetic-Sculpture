@@ -13,13 +13,13 @@ Car::Car()
 #else
   wheels = BrushMotor();
 #endif
-  flower = StepMotor();
+  flower = StepMotor("flower", 33, 25, 26, 27);
 #if SEPARATE_LEAVES
   // TODO: specify pins for separate leaves
-  frontLeaves = ServoMotor();
-  backLeaves = ServoMotor();
+  frontLeaves = ServoMotor("front leaves", 1);
+  backLeaves = ServoMotor("back leaves", 2);
 #else
-  leaves = ServoMotor();
+  leaves = ServoMotor("leaves", 2);
 #endif
 }
 
@@ -32,17 +32,19 @@ Car::Car(std::string _name)
 {
   name = _name;
 #if SEPARATE_WHEELS
+  // TODO: specify pins for separate wheeks
   rightWheel = BrushMotor();
   leftWheel = BrushMotor();
 #else
-  wheels = BrushMotor();
+  wheels = BrushMotor("flower", 33, 25, 26, 27);
 #endif
   flower = StepMotor();
 #if SEPARATE_LEAVES
-  frontLeaves = ServoMotor();
-  backLeaves = ServoMotor();
+  // TODO: specify pins for separate leaves
+  frontLeaves = ServoMotor("front leaves", 1);
+  backLeaves = ServoMotor("back leaves", 2);
 #else
-  leaves = ServoMotor();
+  leaves = ServoMotor("leaves", 2);
 #endif
 }
 
@@ -69,11 +71,15 @@ void Car::run()
 #if SEPARATE_LEAVES
   // TODO: write handler for separate leaves
 #else
-  leaves.moveTo(180);
+  // leaves.moveTo(180);
+
+  leaves.rotateCounterclockwise(180);
 
   printToScreen("one way");
 
-  leaves.moveTo(0);
+  leaves.rotateClockwise(180);
+
+  // leaves.moveTo(0);
 
   printToScreen("other way\nmoved leaves");
 

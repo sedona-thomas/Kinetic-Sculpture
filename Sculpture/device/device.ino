@@ -11,7 +11,15 @@
 #include "esp32_screen.h"
 #include "car.h"
 
+#include "step.h"
+#include "servo.h"
+#include "brush.h"
+
 Car car = Car();
+
+StepMotor step = StepMotor();
+ServoMotor servo = ServoMotor();
+BrushMotor brush = BrushMotor();
 
 void setupSerial()
 {
@@ -21,7 +29,10 @@ void setupSerial()
 
 void test()
 {
-  car.run();
+  // car.run();
+  step.test();
+  servo.test();
+  brush.test();
 }
 
 void testingLoop()
