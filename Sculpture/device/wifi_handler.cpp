@@ -34,12 +34,12 @@ void wifiLoop()
             String response = http.getString();
             if (response.equals("false"))
             {
-                randomBackground()
+                randomBackground();
             }
             else if (response.equals("true"))
             {
-                rainbowBackground()
-                    car.run();
+                rainbowBackground();
+                car.run();
             }
             USE_SERIAL.println("Response was: " + response);
         }
