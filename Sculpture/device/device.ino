@@ -12,13 +12,13 @@
 //#include "car.h"
 
 #include "step.h"
-#include "servo.h"
-#include "brush.h"
+//#include "servo.h"
+//#include "brush.h"
 
-Car car = Car();
+// Car car = Car();
 
-StepMotor step = StepMotor("flower", 33, 25, 26, 27);
-// ServoMotor servo = ServoMotor();
+// StepMotor step = StepMotor("flower", 33, 25, 26, 27);
+ServoMotor servo = ServoMotor();
 // BrushMotor brush = BrushMotor();
 
 void setupSerial()
@@ -31,8 +31,8 @@ void test()
 {
   // car.run();
   printToScreen("testing");
-  step.test();
-  // servo.test();
+  // step.test();
+  servo.test();
   // brush.test();
   printToScreen("endTesting");
 }
@@ -54,4 +54,5 @@ void setup()
 void loop()
 {
   test();
+  delay(1000);
 }

@@ -10,6 +10,7 @@ StepMotor::StepMotor()
   outPorts[1] = 25;
   outPorts[2] = 26;
   outPorts[3] = 27;
+  setup();
 }
 
 /**
@@ -24,6 +25,7 @@ StepMotor::StepMotor(std::string _name)
   outPorts[1] = 25;
   outPorts[2] = 26;
   outPorts[3] = 27;
+  setup();
 }
 
 /**
@@ -42,6 +44,7 @@ StepMotor::StepMotor(std::string _name, int in1, int in2, int in3, int in4)
   outPorts[1] = in2;
   outPorts[2] = in3;
   outPorts[3] = in4;
+  setup();
 }
 
 /**
