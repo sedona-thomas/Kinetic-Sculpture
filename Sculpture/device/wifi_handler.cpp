@@ -8,6 +8,7 @@ Car car = Car();
 void wifiSetup()
 {
     setupScreen();
+    updateScreen(true);
     car.setup();
     USE_SERIAL.begin(115200);
     WiFi.begin(ssid_Router, password_Router);
@@ -24,9 +25,10 @@ void wifiSetup()
 
 void wifiLoop()
 {
-    printToScreen("loop");
     randomBackground();
+    printToScreen("loop");
     delay(1000 * 3);
+
     if ((WiFi.status() == WL_CONNECTED))
     {
         HTTPClient http;
