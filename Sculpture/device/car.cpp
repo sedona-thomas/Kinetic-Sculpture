@@ -52,10 +52,12 @@ Car::Car(std::string _name)
 void Car::run()
 {
   printToScreen("running");
+
 #if SEPARATE_WHEELS
   // TODO: write handler for separate wheels
 #else
-  wheels.drive(2048);
+  wheels.drive(1000);
+  delay(5 * SECOND);
 #endif
 
   printToScreen("drove");
@@ -68,9 +70,14 @@ void Car::run()
   // TODO: write handler for separate leaves
 #else
   leaves.moveTo(180);
+
   printToScreen("one way");
+
   leaves.moveTo(0);
+
   printToScreen("other way\nmoved leaves");
+
 #endif
+
   printToScreen("endRun");
 }
