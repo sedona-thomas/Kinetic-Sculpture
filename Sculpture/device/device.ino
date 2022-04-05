@@ -23,7 +23,7 @@ void test() {
 }
 
 void testingLoop() {
-  updateScreen(true);//DISPLAY_VALUES);
+  updateScreen(true);
   test();
   delay(FRAMERATE);
 }
