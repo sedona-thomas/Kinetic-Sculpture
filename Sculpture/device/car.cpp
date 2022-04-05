@@ -13,7 +13,6 @@ Car::Car()
   wheels = BrushMotor();
 #endif
   flower = StepMotor();
-  
 #if SEPARATE_LEAVES
   frontLeaves = ServoMotor();
   backLeaves = ServoMotor();
@@ -37,8 +36,12 @@ Car::Car(std::string _name)
   wheels = BrushMotor();
 #endif
   flower = StepMotor();
+#if SEPARATE_LEAVES
   frontLeaves = ServoMotor();
   backLeaves = ServoMotor();
+#else
+  leaves = ServoMotor();
+#endif
 }
 
 /**
