@@ -23,6 +23,8 @@ void wifiSetup()
 
 void wifiLoop()
 {
+    printToScreen("loop");
+
     if ((WiFi.status() == WL_CONNECTED))
     {
         HTTPClient http;
