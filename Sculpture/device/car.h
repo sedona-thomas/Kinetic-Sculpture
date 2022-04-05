@@ -11,6 +11,7 @@
 
 #define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
 #define SEPARATE_WHEELS false /**< whether wheels are controlled individually */
+#define SEPARATE_LEAVES false /**< whether leaves are controlled individually */
 
 /**
  * The Car class controls the car and flower
@@ -23,7 +24,6 @@ class Car
 public:
   Car();
   Car(std::string);
-  void setup();
   void run();
 
 private:
@@ -35,8 +35,13 @@ private:
   BrushMotor wheels;
 #endif
   StepMotor flower;
+#if SEPARATE_LEAVES
   ServoMotor frontLeaves;
   ServoMotor backLeaves;
+#else
+  ServoMotor leaves;
+#endif
+  
 };
 
 #endif
