@@ -9,6 +9,8 @@
 #include "step.h"
 #include "brush.h"
 
+#include "esp32_screen.h"
+
 #define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
 #define SEPARATE_WHEELS false /**< whether wheels are controlled individually */
 #define SEPARATE_LEAVES false /**< whether leaves are controlled individually */
@@ -41,7 +43,6 @@ private:
 #else
   ServoMotor leaves;
 #endif
-  
 };
 
 #endif
