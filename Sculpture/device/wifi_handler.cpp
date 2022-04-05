@@ -1,14 +1,14 @@
 #include "wifi_handler.h"
 
-const char *ssid_Router = "Columbia U Secure"; /**< router name */
-const char *password_Router = "";              /**< router password */
+const char *ssid_Router = "Columbia University"; /**< router name */
+const char *password_Router = "";                /**< router password */
 String address = "http://134.122.113.13/snt2127/running";
 Car car = Car();
 
 void wifiSetup()
 {
     setupScreen();
-    updateScreen(true);
+    resetScreen();
     car.setup();
     delay(1000 * 5);
 
@@ -19,6 +19,7 @@ void wifiSetup()
     {
         delay(500);
         USE_SERIAL.print(".");
+        printToScreen(".");
     }
     USE_SERIAL.println("\nConnected, IP address: ");
     USE_SERIAL.println(WiFi.localIP());
@@ -27,10 +28,6 @@ void wifiSetup()
 
 void wifiLoop()
 {
-    randomBackground();
-    printToScreen("loop");
-    delay(1000 * 3);
-
     if ((WiFi.status() == WL_CONNECTED))
     {
         HTTPClient http;
@@ -42,11 +39,13 @@ void wifiLoop()
             if (response.equals("false"))
             {
                 randomBackground();
+                printToScreen("false");
                 delay(SECOND * 5);
             }
             else if (response.equals("true"))
             {
                 rainbowBackground();
+                printToScreen("false");
                 car.run();
                 delay(SECOND * 5);
             }

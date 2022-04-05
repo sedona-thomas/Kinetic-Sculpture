@@ -131,7 +131,7 @@ void randomBackground()
  */
 void rainbowBackground()
 {
-  tft.setRotation(1);
+  tft.setRotation(2);
   byte red = 31, green = 0, blue = 0, state = 0;
   unsigned int colour = red << 11;
   for (int i = 0; i < tft.width(); i++)
