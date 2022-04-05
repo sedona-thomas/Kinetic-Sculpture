@@ -18,14 +18,11 @@ void setupSerial()
 
 void setup()
 {
-  setupSerial();
-  setupScreen();
+  // setupSerial();
   wifiSetup();
-  updateScreen(DISPLAY_VALUES);
 }
 
 void loop()
 {
-  updateScreen(DISPLAY_VALUES);
   wifiLoop();
 }
