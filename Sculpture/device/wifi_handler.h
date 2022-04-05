@@ -10,11 +10,6 @@
 #define USE_SERIAL Serial    /**< serial communication */
 #define TESTING_MOTORS false /**< whether motors are being tested */
 
-const char *ssid_Router = "Columbia U Secure"; /**< router name */
-const char *password_Router = "";              /**< router password */
-String address = "http://134.122.113.13/snt2127/running";
-Car car = Car();
-
 void wifiSetup();
 void wifiLoop();
 
