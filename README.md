@@ -80,3 +80,14 @@
 - Connect the positive terminal to the ____ pin on the ESP32
 - Connect the negaitve terminal to a Ground pin on the ESP32
 
+#### Assembly  
+Makercase - Enclosure Box: https://en.makercase.com/#/ 
+Thingiverse link for 3D printable rose: https://www.thingiverse.com/thing:255980
+
+##### Building Box
+- Use Makercase webite to build a basic box
+- Finger Edge Joints set to smallest Finger Size (0.25075)
+- Download Box plans as DXF File (Not SVG for some laser cutting software)
+- Use Dremel for holes to insert motor wires, battery pack wires and ESP32 USB-C connection 
+- WORK IN PROGRESS
+
