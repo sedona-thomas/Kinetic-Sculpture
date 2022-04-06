@@ -1,0 +1,166 @@
+\hypertarget{class_step_motor}{}\doxysection{Step\+Motor Class Reference}
+\label{class_step_motor}\index{StepMotor@{StepMotor}}
+
+
+{\ttfamily \#include $<$step.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_step_motor_a2fd96347520a0753999c015614fd8c31}{Step\+Motor}} (std\+::string, int, int, int, int)
+\item 
+\mbox{\hyperlink{class_step_motor_a275128cc38a913970a04c563025e7554}{Step\+Motor}} (std\+::string)
+\item 
+\mbox{\hyperlink{class_step_motor_a3d6485c562222bfc86fa2299a1bb31f7}{Step\+Motor}} ()
+\item 
+void \mbox{\hyperlink{class_step_motor_a02c8ba8cb54b297e65608a4bf4e3b8d5}{setup}} ()
+\item 
+void \mbox{\hyperlink{class_step_motor_ac750676a13c04d4584df758794db1614}{test}} ()
+\item 
+void \mbox{\hyperlink{class_step_motor_a29bb2280736a4d2cac095b9f54e8301f}{move\+Steps}} (bool, int, byte)
+\item 
+void \mbox{\hyperlink{class_step_motor_a9c82843be18c40c4419de2fbcb12bf1d}{move\+One\+Step}} (bool)
+\item 
+void \mbox{\hyperlink{class_step_motor_a39875341c8062bbf0d35c3d96badbc92}{move\+Around}} (bool, int, byte)
+\item 
+void \mbox{\hyperlink{class_step_motor_a7ca3efc4e91a99d46eb044bb6b22328a}{move\+Angle}} (bool, int, byte)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_step_motor}{Step\+Motor}} class controls the necessary features of a step motor
+
+\begin{DoxyAuthor}{Author}
+Sedona Thomas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_step_motor_a2fd96347520a0753999c015614fd8c31}\label{class_step_motor_a2fd96347520a0753999c015614fd8c31}} 
+\index{StepMotor@{StepMotor}!StepMotor@{StepMotor}}
+\index{StepMotor@{StepMotor}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{StepMotor()}{StepMotor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Step\+Motor\+::\+Step\+Motor (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name,  }\item[{int}]{in1,  }\item[{int}]{in2,  }\item[{int}]{in3,  }\item[{int}]{in4 }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_step_motor}{Step\+Motor}} constructor makes a step object
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+in} & the step motor name \\
+\hline
+{\em in1} & the pin that the step motor in1 is connected to \\
+\hline
+{\em in2} & the pin that the step motor in2 is connected to \\
+\hline
+{\em in3} & the pin that the step motor in3 is connected to \\
+\hline
+{\em in4} & the pin that the step motor in4 is connected to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_step_motor_a275128cc38a913970a04c563025e7554}\label{class_step_motor_a275128cc38a913970a04c563025e7554}} 
+\index{StepMotor@{StepMotor}!StepMotor@{StepMotor}}
+\index{StepMotor@{StepMotor}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{StepMotor()}{StepMotor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Step\+Motor\+::\+Step\+Motor (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_step_motor}{Step\+Motor}} constructor makes a step motor object
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+in} & the step motor name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_step_motor_a3d6485c562222bfc86fa2299a1bb31f7}\label{class_step_motor_a3d6485c562222bfc86fa2299a1bb31f7}} 
+\index{StepMotor@{StepMotor}!StepMotor@{StepMotor}}
+\index{StepMotor@{StepMotor}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{StepMotor()}{StepMotor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Step\+Motor\+::\+Step\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_step_motor}{Step\+Motor}} constructor makes a step motor object 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_step_motor_a7ca3efc4e91a99d46eb044bb6b22328a}\label{class_step_motor_a7ca3efc4e91a99d46eb044bb6b22328a}} 
+\index{StepMotor@{StepMotor}!moveAngle@{moveAngle}}
+\index{moveAngle@{moveAngle}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{moveAngle()}{moveAngle()}}
+{\footnotesize\ttfamily void Step\+Motor\+::move\+Angle (\begin{DoxyParamCaption}\item[{bool}]{dir,  }\item[{int}]{angle,  }\item[{byte}]{ms }\end{DoxyParamCaption})}
+
+The move\+Angle method moves the step motor by the specified angle
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & direction to move (true if clockwise else false) \\
+\hline
+{\em angle} & angle by which to turn \\
+\hline
+{\em ms} & miliseconds to delay between rotation steps \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_step_motor_a39875341c8062bbf0d35c3d96badbc92}\label{class_step_motor_a39875341c8062bbf0d35c3d96badbc92}} 
+\index{StepMotor@{StepMotor}!moveAround@{moveAround}}
+\index{moveAround@{moveAround}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{moveAround()}{moveAround()}}
+{\footnotesize\ttfamily void Step\+Motor\+::move\+Around (\begin{DoxyParamCaption}\item[{bool}]{dir,  }\item[{int}]{turns,  }\item[{byte}]{ms }\end{DoxyParamCaption})}
+
+The move\+Around method moves full rotations at a controlled speed
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & direction to move (true if clockwise else false) \\
+\hline
+{\em turns} & number of full rotations to make \\
+\hline
+{\em ms} & miliseconds to delay between rotation steps \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_step_motor_a9c82843be18c40c4419de2fbcb12bf1d}\label{class_step_motor_a9c82843be18c40c4419de2fbcb12bf1d}} 
+\index{StepMotor@{StepMotor}!moveOneStep@{moveOneStep}}
+\index{moveOneStep@{moveOneStep}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{moveOneStep()}{moveOneStep()}}
+{\footnotesize\ttfamily void Step\+Motor\+::move\+One\+Step (\begin{DoxyParamCaption}\item[{bool}]{dir }\end{DoxyParamCaption})}
+
+The move\+One\+Step method moves one step in the specified direction
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & direction to move (true if clockwise else false) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_step_motor_a29bb2280736a4d2cac095b9f54e8301f}\label{class_step_motor_a29bb2280736a4d2cac095b9f54e8301f}} 
+\index{StepMotor@{StepMotor}!moveSteps@{moveSteps}}
+\index{moveSteps@{moveSteps}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{moveSteps()}{moveSteps()}}
+{\footnotesize\ttfamily void Step\+Motor\+::move\+Steps (\begin{DoxyParamCaption}\item[{bool}]{dir,  }\item[{int}]{steps,  }\item[{byte}]{ms }\end{DoxyParamCaption})}
+
+The move\+Steps method moves the specified number of steps in the specified direction
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & direction to move (true if clockwise else false) \\
+\hline
+{\em steps} & number of steps to move \\
+\hline
+{\em ms} & miliseconds to delay between rotation steps \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_step_motor_a02c8ba8cb54b297e65608a4bf4e3b8d5}\label{class_step_motor_a02c8ba8cb54b297e65608a4bf4e3b8d5}} 
+\index{StepMotor@{StepMotor}!setup@{setup}}
+\index{setup@{setup}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void Step\+Motor\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The setup method sets up a step motor \mbox{\Hypertarget{class_step_motor_ac750676a13c04d4584df758794db1614}\label{class_step_motor_ac750676a13c04d4584df758794db1614}} 
+\index{StepMotor@{StepMotor}!test@{test}}
+\index{test@{test}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily void Step\+Motor\+::test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The test method moves the step motor back and forth then resets 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+device/step.\+h\item 
+device/step.\+cpp\end{DoxyCompactItemize}

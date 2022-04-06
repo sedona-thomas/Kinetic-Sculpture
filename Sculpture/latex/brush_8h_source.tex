@@ -1,0 +1,45 @@
+\hypertarget{brush_8h_source}{}\doxysection{brush.\+h}
+\label{brush_8h_source}\index{device/brush.h@{device/brush.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_BRUSH\_H\_\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_BRUSH\_H\_\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define SECOND 1000              }}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define READ\_POTENTIOMETER false }}
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_brush_motor}{BrushMotor}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21   \mbox{\hyperlink{class_brush_motor_a9e2a5869b23df0fdec3b5b3696154e94}{BrushMotor}}(std::string, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{22   \mbox{\hyperlink{class_brush_motor_a9e2a5869b23df0fdec3b5b3696154e94}{BrushMotor}}(std::string, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{23   \mbox{\hyperlink{class_brush_motor_a9e2a5869b23df0fdec3b5b3696154e94}{BrushMotor}}(std::string);}
+\DoxyCodeLine{24   \mbox{\hyperlink{class_brush_motor_a9e2a5869b23df0fdec3b5b3696154e94}{BrushMotor}}();}
+\DoxyCodeLine{25   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_brush_motor_a33fe4a7ac492eab191aa063346545fdf}{setup}}();}
+\DoxyCodeLine{26   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_brush_motor_a8ae3f077c320bd2d4b395c0d11ed828a}{reset}}();}
+\DoxyCodeLine{27   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_brush_motor_ae4490bfb0b4a8eaff2076b3d9af28316}{test}}();}
+\DoxyCodeLine{28   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_brush_motor_a04d8b2d0246dae130ec461c2941ccba2}{driveMotor}}(\textcolor{keywordtype}{bool}, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{29   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_brush_motor_a20e38ca0ed8b89d76fe7fca85017e54e}{drive}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{30   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_brush_motor_a620cc6424340d882b8467c8870dfebc8}{rotate}}();}
+\DoxyCodeLine{31   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_brush_motor_aa4e65aa4530d38770952f7065dd1cc98}{rotateClockwise}}();}
+\DoxyCodeLine{32   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_brush_motor_a4322168b32ae8407c37548e9e7b311dd}{rotateCounterclockwise}}();}
+\DoxyCodeLine{33   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_brush_motor_afec31e516e3660f1abbd767302c53a2a}{motorSpeed}}();}
+\DoxyCodeLine{34   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_brush_motor_aff5f68d4fe0aca47fef63bc8f15092e1}{motorDirection}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{private}:}
+\DoxyCodeLine{37   std::string name;}
+\DoxyCodeLine{38   \textcolor{keywordtype}{int} ports[3]; }
+\DoxyCodeLine{39   \textcolor{keywordtype}{int} potentiometerPin;}
+\DoxyCodeLine{40   \textcolor{keywordtype}{int} channel;}
+\DoxyCodeLine{41   \textcolor{keywordtype}{int} potentiometerValue;}
+\DoxyCodeLine{42   \textcolor{keywordtype}{int} rotationSpeed;}
+\DoxyCodeLine{43   \textcolor{keywordtype}{bool} rotationDirection;}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

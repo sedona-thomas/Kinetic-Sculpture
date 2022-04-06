@@ -1,0 +1,160 @@
+.TH "BrushMotor" 3 "Wed Apr 6 2022" "'Kinetic Sculpture'" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BrushMotor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <brush\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBrushMotor\fP (std::string, int, int, int, int)"
+.br
+.ti -1c
+.RI "\fBBrushMotor\fP (std::string, int, int, int)"
+.br
+.ti -1c
+.RI "\fBBrushMotor\fP (std::string)"
+.br
+.ti -1c
+.RI "\fBBrushMotor\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetup\fP ()"
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.ti -1c
+.RI "void \fBtest\fP ()"
+.br
+.ti -1c
+.RI "void \fBdriveMotor\fP (bool, int)"
+.br
+.ti -1c
+.RI "void \fBdrive\fP (int)"
+.br
+.ti -1c
+.RI "void \fBrotate\fP ()"
+.br
+.ti -1c
+.RI "void \fBrotateClockwise\fP ()"
+.br
+.ti -1c
+.RI "void \fBrotateCounterclockwise\fP ()"
+.br
+.ti -1c
+.RI "void \fBmotorSpeed\fP ()"
+.br
+.ti -1c
+.RI "void \fBmotorDirection\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBBrushMotor\fP class controls the necessary features of a DC brush motor
+.PP
+\fBAuthor\fP
+.RS 4
+Sedona Thomas 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0\&.0 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BrushMotor::BrushMotor (std::string _name, int inPin1, int inPin2, int enablePin, int _channel)"
+\fBBrushMotor\fP constructor makes a brush object
+.PP
+\fBParameters\fP
+.RS 4
+\fIname_in\fP the brush motor name 
+.br
+\fIinPin1\fP the pin that the L293D channel 1 pin is connected to 
+.br
+\fIinPin2\fP the pin that the L293D channel 2 pin is connected to 
+.br
+\fIenablePin\fP the pin that the L293D enable 1 pin is connected to 
+.br
+\fI_channel\fP the channel 
+.RE
+.PP
+
+.SS "BrushMotor::BrushMotor (std::string _name, int inPin1, int inPin2, int enablePin)"
+\fBBrushMotor\fP constructor makes a brush object
+.PP
+\fBParameters\fP
+.RS 4
+\fIname_in\fP the brush motor name 
+.br
+\fIinPin1\fP the pin that the L293D channel 1 pin is connected to 
+.br
+\fIinPin2\fP the pin that the L293D channel 2 pin is connected to 
+.br
+\fIenablePin\fP the pin that the L293D enable 1 pin is connected to 
+.RE
+.PP
+
+.SS "BrushMotor::BrushMotor (std::string _name)"
+\fBBrushMotor\fP constructor makes a brush motor object
+.PP
+\fBParameters\fP
+.RS 4
+\fIname_in\fP the brush motor name 
+.RE
+.PP
+
+.SS "BrushMotor::BrushMotor ()"
+\fBBrushMotor\fP constructor makes a brush motor object 
+.SH "Member Function Documentation"
+.PP 
+.SS "void BrushMotor::drive (int speed)"
+The drive method rotates the brush motor at the given speed
+.PP
+\fBParameters\fP
+.RS 4
+\fIspeed\fP the speed of the motor (range 0-2048) 
+.RE
+.PP
+
+.SS "void BrushMotor::driveMotor (bool direction, int speed)"
+The driveMotor method rotates the brush motor
+.PP
+\fBParameters\fP
+.RS 4
+\fIdirection\fP whether the direction is forward 
+.br
+\fIspeed\fP the speed of the motor (range 0-2048) 
+.RE
+.PP
+
+.SS "void BrushMotor::motorDirection ()"
+The motorDirection method calculates the current rotation direction 
+.SS "void BrushMotor::motorSpeed ()"
+The motorSpeed method calculates the current rotation speed 
+.SS "void BrushMotor::reset ()"
+The reset method moves the motor into its initial resting state 
+.SS "void BrushMotor::rotate ()"
+The rotate method rotates the brush motor 
+.SS "void BrushMotor::rotateClockwise ()"
+The rotateClockwise method rotates the brush motor clockwise 
+.SS "void BrushMotor::rotateCounterclockwise ()"
+The rotateCounterclockwise method rotates the brush motor counterclockwise 
+.SS "void BrushMotor::setup ()"
+The setup method sets up a brush motor
+.PP
+ledcAttachPin() sets pulse width modulation to 11 bits (range 0-2047) 
+.SS "void BrushMotor::test ()"
+The test method moves the motor moves forward and backward 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for 'Kinetic Sculpture' from the source code\&.

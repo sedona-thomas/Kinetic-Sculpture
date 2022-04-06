@@ -1,0 +1,30 @@
+\hypertarget{esp32__screen_8h_source}{}\doxysection{esp32\+\_\+screen.\+h}
+\label{esp32__screen_8h_source}\index{device/esp32\_screen.h@{device/esp32\_screen.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef \_\_ESP32\_SCREEN\_H\_\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define \_\_ESP32\_SCREEN\_H\_\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <SPI.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <TFT\_eSPI.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define WAIT 500     }}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define FRAMERATE 50 }}
+\DoxyCodeLine{19 \textcolor{keywordtype}{void} setupScreen();}
+\DoxyCodeLine{20 \textcolor{keywordtype}{void} resetScreen();}
+\DoxyCodeLine{21 \textcolor{keywordtype}{void} updateScreen(\textcolor{keywordtype}{bool} display\_values);}
+\DoxyCodeLine{22 \textcolor{keywordtype}{void} printToScreen(std::string s);}
+\DoxyCodeLine{23 \textcolor{keywordtype}{void} printSensorToScreen(std::string name, uint8\_t value);}
+\DoxyCodeLine{24 String getArduinoString(std::string str);}
+\DoxyCodeLine{25 std::vector<String> getLetterVector(std::string str);}
+\DoxyCodeLine{26 \textcolor{keyword}{inline} uint16\_t randomColor();}
+\DoxyCodeLine{27 \textcolor{keyword}{inline} uint16\_t getRGB(uint8\_t r, uint8\_t g, uint8\_t b);}
+\DoxyCodeLine{28 \textcolor{keywordtype}{void} randomBackground();}
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} rainbowBackground();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

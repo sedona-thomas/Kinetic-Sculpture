@@ -1,0 +1,48 @@
+\hypertarget{car_8h_source}{}\doxysection{car.\+h}
+\label{car_8h_source}\index{device/car.h@{device/car.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_CAR\_H\_\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_CAR\_H\_\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}servo.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}step.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}brush.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}esp32\_screen.h"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define SECOND 1000           }}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define SEPARATE\_WHEELS false }}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define SEPARATE\_LEAVES false }}
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_car}{Car}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27   \mbox{\hyperlink{class_car_a1c803f7c5038d3e31b368b0d0a35493c}{Car}}();}
+\DoxyCodeLine{28   \mbox{\hyperlink{class_car_a1c803f7c5038d3e31b368b0d0a35493c}{Car}}(std::string);}
+\DoxyCodeLine{29   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_car_a6f3971521a345a668a01616827ab9dbc}{setup}}();}
+\DoxyCodeLine{30   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_car_ac2dfa05283a98fa0ecc86c52386e6943}{run}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{private}:}
+\DoxyCodeLine{33   std::string name;}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#if SEPARATE\_WHEELS}}
+\DoxyCodeLine{35   \mbox{\hyperlink{class_brush_motor}{BrushMotor}} rightWheel;}
+\DoxyCodeLine{36   \mbox{\hyperlink{class_brush_motor}{BrushMotor}} leftWheel;}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{38   \mbox{\hyperlink{class_brush_motor}{BrushMotor}} wheels;}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{40   \mbox{\hyperlink{class_step_motor}{StepMotor}} flower;}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#if SEPARATE\_LEAVES}}
+\DoxyCodeLine{42   \mbox{\hyperlink{class_servo_motor}{ServoMotor}} frontLeaves;}
+\DoxyCodeLine{43   \mbox{\hyperlink{class_servo_motor}{ServoMotor}} backLeaves;}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{45   \mbox{\hyperlink{class_servo_motor}{ServoMotor}} leaves;}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

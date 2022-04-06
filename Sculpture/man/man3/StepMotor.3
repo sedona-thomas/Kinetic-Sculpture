@@ -1,0 +1,144 @@
+.TH "StepMotor" 3 "Wed Apr 6 2022" "'Kinetic Sculpture'" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+StepMotor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <step\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStepMotor\fP (std::string, int, int, int, int)"
+.br
+.ti -1c
+.RI "\fBStepMotor\fP (std::string)"
+.br
+.ti -1c
+.RI "\fBStepMotor\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetup\fP ()"
+.br
+.ti -1c
+.RI "void \fBtest\fP ()"
+.br
+.ti -1c
+.RI "void \fBmoveSteps\fP (bool, int, byte)"
+.br
+.ti -1c
+.RI "void \fBmoveOneStep\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBmoveAround\fP (bool, int, byte)"
+.br
+.ti -1c
+.RI "void \fBmoveAngle\fP (bool, int, byte)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBStepMotor\fP class controls the necessary features of a step motor
+.PP
+\fBAuthor\fP
+.RS 4
+Sedona Thomas 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0\&.0 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "StepMotor::StepMotor (std::string _name, int in1, int in2, int in3, int in4)"
+\fBStepMotor\fP constructor makes a step object
+.PP
+\fBParameters\fP
+.RS 4
+\fIname_in\fP the step motor name 
+.br
+\fIin1\fP the pin that the step motor in1 is connected to 
+.br
+\fIin2\fP the pin that the step motor in2 is connected to 
+.br
+\fIin3\fP the pin that the step motor in3 is connected to 
+.br
+\fIin4\fP the pin that the step motor in4 is connected to 
+.RE
+.PP
+
+.SS "StepMotor::StepMotor (std::string _name)"
+\fBStepMotor\fP constructor makes a step motor object
+.PP
+\fBParameters\fP
+.RS 4
+\fIname_in\fP the step motor name 
+.RE
+.PP
+
+.SS "StepMotor::StepMotor ()"
+\fBStepMotor\fP constructor makes a step motor object 
+.SH "Member Function Documentation"
+.PP 
+.SS "void StepMotor::moveAngle (bool dir, int angle, byte ms)"
+The moveAngle method moves the step motor by the specified angle
+.PP
+\fBParameters\fP
+.RS 4
+\fIdir\fP direction to move (true if clockwise else false) 
+.br
+\fIangle\fP angle by which to turn 
+.br
+\fIms\fP miliseconds to delay between rotation steps 
+.RE
+.PP
+
+.SS "void StepMotor::moveAround (bool dir, int turns, byte ms)"
+The moveAround method moves full rotations at a controlled speed
+.PP
+\fBParameters\fP
+.RS 4
+\fIdir\fP direction to move (true if clockwise else false) 
+.br
+\fIturns\fP number of full rotations to make 
+.br
+\fIms\fP miliseconds to delay between rotation steps 
+.RE
+.PP
+
+.SS "void StepMotor::moveOneStep (bool dir)"
+The moveOneStep method moves one step in the specified direction
+.PP
+\fBParameters\fP
+.RS 4
+\fIdir\fP direction to move (true if clockwise else false) 
+.RE
+.PP
+
+.SS "void StepMotor::moveSteps (bool dir, int steps, byte ms)"
+The moveSteps method moves the specified number of steps in the specified direction
+.PP
+\fBParameters\fP
+.RS 4
+\fIdir\fP direction to move (true if clockwise else false) 
+.br
+\fIsteps\fP number of steps to move 
+.br
+\fIms\fP miliseconds to delay between rotation steps 
+.RE
+.PP
+
+.SS "void StepMotor::setup ()"
+The setup method sets up a step motor 
+.SS "void StepMotor::test ()"
+The test method moves the step motor back and forth then resets 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for 'Kinetic Sculpture' from the source code\&.

@@ -1,0 +1,40 @@
+\hypertarget{servo_8h_source}{}\doxysection{servo.\+h}
+\label{servo_8h_source}\index{device/servo.h@{device/servo.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_SERVO\_H\_\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_SERVO\_H\_\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <ESP32Servo.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define SECOND 1000   }}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define SERVO\_DELAY 5 }}
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_servo_motor}{ServoMotor}}}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22   \mbox{\hyperlink{class_servo_motor_aee8fd59d894d297335992daaffebbd72}{ServoMotor}}(std::string, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{23   \mbox{\hyperlink{class_servo_motor_aee8fd59d894d297335992daaffebbd72}{ServoMotor}}(std::string);}
+\DoxyCodeLine{24   \mbox{\hyperlink{class_servo_motor_aee8fd59d894d297335992daaffebbd72}{ServoMotor}}();}
+\DoxyCodeLine{25   \textcolor{keywordtype}{int} \mbox{\hyperlink{class_servo_motor_ad58031bc04e0e9aef7878ecedd66a2ca}{getAngle}}();}
+\DoxyCodeLine{26   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_servo_motor_a37fdacb859d2437e25ab9b49f125d145}{changeAngle}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{27   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_servo_motor_aea2a077f58f4b82127309cca2a203f60}{setup}}();}
+\DoxyCodeLine{28   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_servo_motor_a63d76861cea9618130f9bc9e44a83601}{reset}}();}
+\DoxyCodeLine{29   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_servo_motor_a7e9ad3a482ef93d0da5d6086393bfb9e}{test}}();}
+\DoxyCodeLine{30   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_servo_motor_ab52431eafc2a3c0b5e21181610978320}{moveTo}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{31   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_servo_motor_a00346c182bb9d7b81a5f6ca0c13ae5b6}{rotateClockwise}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{32   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_servo_motor_afa75e935caebaedb181abb313ce63e2b}{rotateCounterclockwise}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{private}:}
+\DoxyCodeLine{35   std::string name;}
+\DoxyCodeLine{36   Servo motor;}
+\DoxyCodeLine{37   \textcolor{keywordtype}{int} port; }
+\DoxyCodeLine{38   \textcolor{keywordtype}{int} angle;}
+\DoxyCodeLine{39 \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

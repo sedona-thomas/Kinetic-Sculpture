@@ -1,0 +1,143 @@
+.TH "ServoMotor" 3 "Wed Apr 6 2022" "'Kinetic Sculpture'" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ServoMotor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <servo\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBServoMotor\fP (std::string, int)"
+.br
+.ti -1c
+.RI "\fBServoMotor\fP (std::string)"
+.br
+.ti -1c
+.RI "\fBServoMotor\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetAngle\fP ()"
+.br
+.ti -1c
+.RI "void \fBchangeAngle\fP (int)"
+.br
+.ti -1c
+.RI "void \fBsetup\fP ()"
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.ti -1c
+.RI "void \fBtest\fP ()"
+.br
+.ti -1c
+.RI "void \fBmoveTo\fP (int)"
+.br
+.ti -1c
+.RI "void \fBrotateClockwise\fP (int)"
+.br
+.ti -1c
+.RI "void \fBrotateCounterclockwise\fP (int)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBServoMotor\fP class controls the necessary features of a Servo motor
+.PP
+\fBAuthor\fP
+.RS 4
+Sedona Thomas 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0\&.0 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ServoMotor::ServoMotor (std::string _name, int pin)"
+\fBServoMotor\fP constructor makes a servo object
+.PP
+\fBParameters\fP
+.RS 4
+\fIname_in\fP the servo motor name 
+.br
+\fIpin_in\fP the pin that the servo motor is connected to 
+.RE
+.PP
+
+.SS "ServoMotor::ServoMotor (std::string _name)"
+\fBServoMotor\fP constructor makes a servo motor object
+.PP
+\fBParameters\fP
+.RS 4
+\fIname_in\fP the servo motor name 
+.RE
+.PP
+
+.SS "ServoMotor::ServoMotor ()"
+\fBServoMotor\fP constructor makes a servo motor object 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ServoMotor::changeAngle (int change)"
+The changeAngle method changes the current angle
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP the value to add to the angle 
+.RE
+.PP
+
+.SS "int ServoMotor::getAngle ()"
+The getAngle method returns the current angle
+.PP
+\fBReturns\fP
+.RS 4
+current angle of the servo motor 
+.RE
+.PP
+
+.SS "void ServoMotor::moveTo (int newAngle)"
+The moveTo method moves the servo motor to the specified angle
+.PP
+\fBParameters\fP
+.RS 4
+\fInewAngle\fP the new angle to move the motor arm to 
+.RE
+.PP
+
+.SS "void ServoMotor::reset ()"
+The reset method moves the motor into its initial resting state 
+.SS "void ServoMotor::rotateClockwise (int degrees)"
+The rotateClockwise method rotates the servo motor clockwise
+.PP
+\fBParameters\fP
+.RS 4
+\fIdegrees\fP the degrees to move clockwise 
+.RE
+.PP
+
+.SS "void ServoMotor::rotateCounterclockwise (int degrees)"
+The rotateCounterclockwise method rotates the servo motor counterclockwise
+.PP
+\fBParameters\fP
+.RS 4
+\fIdegrees\fP the degrees to move counterclockwise 
+.RE
+.PP
+
+.SS "void ServoMotor::setup ()"
+The setup method sets up a servo motor 
+.SS "void ServoMotor::test ()"
+The test method moves the servo motor back and forth then resets 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for 'Kinetic Sculpture' from the source code\&.

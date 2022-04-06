@@ -1,0 +1,35 @@
+\hypertarget{step_8h_source}{}\doxysection{step.\+h}
+\label{step_8h_source}\index{device/step.h@{device/step.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_STEP\_H\_\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_STEP\_H\_\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define SECOND 1000  }}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define STEP\_DELAY 5 }}
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_step_motor}{StepMotor}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21   \mbox{\hyperlink{class_step_motor_a3d6485c562222bfc86fa2299a1bb31f7}{StepMotor}}(std::string, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{22   \mbox{\hyperlink{class_step_motor_a3d6485c562222bfc86fa2299a1bb31f7}{StepMotor}}(std::string);}
+\DoxyCodeLine{23   \mbox{\hyperlink{class_step_motor_a3d6485c562222bfc86fa2299a1bb31f7}{StepMotor}}();}
+\DoxyCodeLine{24   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_step_motor_a02c8ba8cb54b297e65608a4bf4e3b8d5}{setup}}();}
+\DoxyCodeLine{25   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_step_motor_ac750676a13c04d4584df758794db1614}{test}}();}
+\DoxyCodeLine{26   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_step_motor_a29bb2280736a4d2cac095b9f54e8301f}{moveSteps}}(\textcolor{keywordtype}{bool}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{byte});}
+\DoxyCodeLine{27   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_step_motor_a9c82843be18c40c4419de2fbcb12bf1d}{moveOneStep}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{28   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_step_motor_a39875341c8062bbf0d35c3d96badbc92}{moveAround}}(\textcolor{keywordtype}{bool}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{byte});}
+\DoxyCodeLine{29   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_step_motor_a7ca3efc4e91a99d46eb044bb6b22328a}{moveAngle}}(\textcolor{keywordtype}{bool}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{byte});}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{private}:}
+\DoxyCodeLine{32   std::string name;}
+\DoxyCodeLine{33   \textcolor{keywordtype}{int} outPorts[4]; }
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,197 @@
+\hypertarget{class_brush_motor}{}\doxysection{Brush\+Motor Class Reference}
+\label{class_brush_motor}\index{BrushMotor@{BrushMotor}}
+
+
+{\ttfamily \#include $<$brush.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_brush_motor_abcdb2f86af54b4dfe64faf443aa32bf1}{Brush\+Motor}} (std\+::string, int, int, int, int)
+\item 
+\mbox{\hyperlink{class_brush_motor_a49aa70b21b708b06f8eeba96b1fee829}{Brush\+Motor}} (std\+::string, int, int, int)
+\item 
+\mbox{\hyperlink{class_brush_motor_a4e23be3d3e40bd4e31aaff7922827686}{Brush\+Motor}} (std\+::string)
+\item 
+\mbox{\hyperlink{class_brush_motor_a9e2a5869b23df0fdec3b5b3696154e94}{Brush\+Motor}} ()
+\item 
+void \mbox{\hyperlink{class_brush_motor_a33fe4a7ac492eab191aa063346545fdf}{setup}} ()
+\item 
+void \mbox{\hyperlink{class_brush_motor_a8ae3f077c320bd2d4b395c0d11ed828a}{reset}} ()
+\item 
+void \mbox{\hyperlink{class_brush_motor_ae4490bfb0b4a8eaff2076b3d9af28316}{test}} ()
+\item 
+void \mbox{\hyperlink{class_brush_motor_a04d8b2d0246dae130ec461c2941ccba2}{drive\+Motor}} (bool, int)
+\item 
+void \mbox{\hyperlink{class_brush_motor_a20e38ca0ed8b89d76fe7fca85017e54e}{drive}} (int)
+\item 
+void \mbox{\hyperlink{class_brush_motor_a620cc6424340d882b8467c8870dfebc8}{rotate}} ()
+\item 
+void \mbox{\hyperlink{class_brush_motor_aa4e65aa4530d38770952f7065dd1cc98}{rotate\+Clockwise}} ()
+\item 
+void \mbox{\hyperlink{class_brush_motor_a4322168b32ae8407c37548e9e7b311dd}{rotate\+Counterclockwise}} ()
+\item 
+void \mbox{\hyperlink{class_brush_motor_afec31e516e3660f1abbd767302c53a2a}{motor\+Speed}} ()
+\item 
+void \mbox{\hyperlink{class_brush_motor_aff5f68d4fe0aca47fef63bc8f15092e1}{motor\+Direction}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_brush_motor}{Brush\+Motor}} class controls the necessary features of a DC brush motor
+
+\begin{DoxyAuthor}{Author}
+Sedona Thomas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_brush_motor_abcdb2f86af54b4dfe64faf443aa32bf1}\label{class_brush_motor_abcdb2f86af54b4dfe64faf443aa32bf1}} 
+\index{BrushMotor@{BrushMotor}!BrushMotor@{BrushMotor}}
+\index{BrushMotor@{BrushMotor}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{BrushMotor()}{BrushMotor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Brush\+Motor\+::\+Brush\+Motor (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name,  }\item[{int}]{in\+Pin1,  }\item[{int}]{in\+Pin2,  }\item[{int}]{enable\+Pin,  }\item[{int}]{\+\_\+channel }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_brush_motor}{Brush\+Motor}} constructor makes a brush object
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+in} & the brush motor name \\
+\hline
+{\em in\+Pin1} & the pin that the L293D channel 1 pin is connected to \\
+\hline
+{\em in\+Pin2} & the pin that the L293D channel 2 pin is connected to \\
+\hline
+{\em enable\+Pin} & the pin that the L293D enable 1 pin is connected to \\
+\hline
+{\em \+\_\+channel} & the channel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brush_motor_a49aa70b21b708b06f8eeba96b1fee829}\label{class_brush_motor_a49aa70b21b708b06f8eeba96b1fee829}} 
+\index{BrushMotor@{BrushMotor}!BrushMotor@{BrushMotor}}
+\index{BrushMotor@{BrushMotor}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{BrushMotor()}{BrushMotor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Brush\+Motor\+::\+Brush\+Motor (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name,  }\item[{int}]{in\+Pin1,  }\item[{int}]{in\+Pin2,  }\item[{int}]{enable\+Pin }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_brush_motor}{Brush\+Motor}} constructor makes a brush object
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+in} & the brush motor name \\
+\hline
+{\em in\+Pin1} & the pin that the L293D channel 1 pin is connected to \\
+\hline
+{\em in\+Pin2} & the pin that the L293D channel 2 pin is connected to \\
+\hline
+{\em enable\+Pin} & the pin that the L293D enable 1 pin is connected to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brush_motor_a4e23be3d3e40bd4e31aaff7922827686}\label{class_brush_motor_a4e23be3d3e40bd4e31aaff7922827686}} 
+\index{BrushMotor@{BrushMotor}!BrushMotor@{BrushMotor}}
+\index{BrushMotor@{BrushMotor}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{BrushMotor()}{BrushMotor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Brush\+Motor\+::\+Brush\+Motor (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_brush_motor}{Brush\+Motor}} constructor makes a brush motor object
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+in} & the brush motor name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brush_motor_a9e2a5869b23df0fdec3b5b3696154e94}\label{class_brush_motor_a9e2a5869b23df0fdec3b5b3696154e94}} 
+\index{BrushMotor@{BrushMotor}!BrushMotor@{BrushMotor}}
+\index{BrushMotor@{BrushMotor}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{BrushMotor()}{BrushMotor()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Brush\+Motor\+::\+Brush\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_brush_motor}{Brush\+Motor}} constructor makes a brush motor object 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_brush_motor_a20e38ca0ed8b89d76fe7fca85017e54e}\label{class_brush_motor_a20e38ca0ed8b89d76fe7fca85017e54e}} 
+\index{BrushMotor@{BrushMotor}!drive@{drive}}
+\index{drive@{drive}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{drive()}{drive()}}
+{\footnotesize\ttfamily void Brush\+Motor\+::drive (\begin{DoxyParamCaption}\item[{int}]{speed }\end{DoxyParamCaption})}
+
+The drive method rotates the brush motor at the given speed
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & the speed of the motor (range 0-\/2048) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brush_motor_a04d8b2d0246dae130ec461c2941ccba2}\label{class_brush_motor_a04d8b2d0246dae130ec461c2941ccba2}} 
+\index{BrushMotor@{BrushMotor}!driveMotor@{driveMotor}}
+\index{driveMotor@{driveMotor}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{driveMotor()}{driveMotor()}}
+{\footnotesize\ttfamily void Brush\+Motor\+::drive\+Motor (\begin{DoxyParamCaption}\item[{bool}]{direction,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+The drive\+Motor method rotates the brush motor
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & whether the direction is forward \\
+\hline
+{\em speed} & the speed of the motor (range 0-\/2048) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_brush_motor_aff5f68d4fe0aca47fef63bc8f15092e1}\label{class_brush_motor_aff5f68d4fe0aca47fef63bc8f15092e1}} 
+\index{BrushMotor@{BrushMotor}!motorDirection@{motorDirection}}
+\index{motorDirection@{motorDirection}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{motorDirection()}{motorDirection()}}
+{\footnotesize\ttfamily void Brush\+Motor\+::motor\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The motor\+Direction method calculates the current rotation direction \mbox{\Hypertarget{class_brush_motor_afec31e516e3660f1abbd767302c53a2a}\label{class_brush_motor_afec31e516e3660f1abbd767302c53a2a}} 
+\index{BrushMotor@{BrushMotor}!motorSpeed@{motorSpeed}}
+\index{motorSpeed@{motorSpeed}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{motorSpeed()}{motorSpeed()}}
+{\footnotesize\ttfamily void Brush\+Motor\+::motor\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The motor\+Speed method calculates the current rotation speed \mbox{\Hypertarget{class_brush_motor_a8ae3f077c320bd2d4b395c0d11ed828a}\label{class_brush_motor_a8ae3f077c320bd2d4b395c0d11ed828a}} 
+\index{BrushMotor@{BrushMotor}!reset@{reset}}
+\index{reset@{reset}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Brush\+Motor\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The reset method moves the motor into its initial resting state \mbox{\Hypertarget{class_brush_motor_a620cc6424340d882b8467c8870dfebc8}\label{class_brush_motor_a620cc6424340d882b8467c8870dfebc8}} 
+\index{BrushMotor@{BrushMotor}!rotate@{rotate}}
+\index{rotate@{rotate}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Brush\+Motor\+::rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The rotate method rotates the brush motor \mbox{\Hypertarget{class_brush_motor_aa4e65aa4530d38770952f7065dd1cc98}\label{class_brush_motor_aa4e65aa4530d38770952f7065dd1cc98}} 
+\index{BrushMotor@{BrushMotor}!rotateClockwise@{rotateClockwise}}
+\index{rotateClockwise@{rotateClockwise}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{rotateClockwise()}{rotateClockwise()}}
+{\footnotesize\ttfamily void Brush\+Motor\+::rotate\+Clockwise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The rotate\+Clockwise method rotates the brush motor clockwise \mbox{\Hypertarget{class_brush_motor_a4322168b32ae8407c37548e9e7b311dd}\label{class_brush_motor_a4322168b32ae8407c37548e9e7b311dd}} 
+\index{BrushMotor@{BrushMotor}!rotateCounterclockwise@{rotateCounterclockwise}}
+\index{rotateCounterclockwise@{rotateCounterclockwise}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{rotateCounterclockwise()}{rotateCounterclockwise()}}
+{\footnotesize\ttfamily void Brush\+Motor\+::rotate\+Counterclockwise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The rotate\+Counterclockwise method rotates the brush motor counterclockwise \mbox{\Hypertarget{class_brush_motor_a33fe4a7ac492eab191aa063346545fdf}\label{class_brush_motor_a33fe4a7ac492eab191aa063346545fdf}} 
+\index{BrushMotor@{BrushMotor}!setup@{setup}}
+\index{setup@{setup}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void Brush\+Motor\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The setup method sets up a brush motor
+
+ledc\+Attach\+Pin() sets pulse width modulation to 11 bits (range 0-\/2047) \mbox{\Hypertarget{class_brush_motor_ae4490bfb0b4a8eaff2076b3d9af28316}\label{class_brush_motor_ae4490bfb0b4a8eaff2076b3d9af28316}} 
+\index{BrushMotor@{BrushMotor}!test@{test}}
+\index{test@{test}!BrushMotor@{BrushMotor}}
+\doxysubsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily void Brush\+Motor\+::test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The test method moves the motor moves forward and backward 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+device/brush.\+h\item 
+device/brush.\+cpp\end{DoxyCompactItemize}
