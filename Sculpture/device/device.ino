@@ -18,7 +18,7 @@ void setupSerial()
 
 void setup()
 {
-  // setupSerial();
+  setupSerial();
   wifiSetup();
 }
 
