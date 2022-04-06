@@ -84,8 +84,7 @@
 - Makercase - Enclosure Box: https://en.makercase.com/#/ 
 - Thingiverse link for 3D printable rose: https://www.thingiverse.com/thing:255980
 - Box measurements added to Github
-#### Materials
-- 1/8th Plywood
+
 ##### Building Box
 - Use Makercase webite to build a basic box
 - Finger Edge Joints set to smallest Finger Size (0.25075)
@@ -120,10 +119,12 @@
 
 #### Decoration
 - Blue and green felt were used to give it its "garden" look. 
-- For the blue flowers cut out small inorganic shapes and pinch one end to scrunch the sides together. Afterward, insert some hot glue where the sides meet and the felt was pinched
+- For the blue flowers cut out small inorganic shapes and pinch one end to scrunch the sides together. Afterward, insert some hot glue where the sides meet and the felt was pinched.
 - The green felt was used for the leaves and green wiring was used to give it its "raised" look
 - For the motor leaves, use one of the addtional attachments that fan out on either side and hot glue three pieces of felt leaves and some wiring(to raise the felt) to the attachement.
 - Bore a hole into the base of the 3D printed rose deep enough to fit the stepper motor. Fit the hole with hot glue and then insert the stepper motor
+- Use paint how you see fit to recreate look (brown and green acrylic paint was used)
+- To conceal holes hot glue "raised" leaves above them and hot glue other decorations to make it look like more of a garden
 
 
 
