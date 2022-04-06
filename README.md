@@ -129,7 +129,7 @@
 
 ## More Information
 
-Medium Blog Post: []()
+Medium Blog Post: [https://sedonathomas.medium.com/kinetic-sculpture-20c4813ef82f](https://sedonathomas.medium.com/kinetic-sculpture-20c4813ef82f)
 
 Youtube Demos: [https://youtu.be/uOoaBGFkzKg](https://youtu.be/uOoaBGFkzKg)
 
