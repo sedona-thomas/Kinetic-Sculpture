@@ -127,4 +127,11 @@
 - To conceal holes hot glue "raised" leaves above them and hot glue other decorations to make it look like more of a garden
 
 
+## More Information
 
+Medium Blog Post: []()
+
+Youtube Demos: [https://youtu.be/uOoaBGFkzKg](https://youtu.be/uOoaBGFkzKg)
+
+##
+## Special Thanks to Professor Mark Santolucito and the staff at the Barnard Design Center for all of their help!!!
