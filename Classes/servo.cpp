@@ -6,23 +6,23 @@
 ServoMotor::ServoMotor()
 {
   name = "servo";
-  port = 15;
+  port = 2;
 }
 
 /**
  * ServoMotor constructor makes a servo motor object
- * 
+ *
  * @param name_in the servo motor name
  */
 ServoMotor::ServoMotor(std::string _name)
 {
   name = _name;
-  port = 15;
+  port = 2;
 }
 
 /**
  * ServoMotor constructor makes a servo object
- * 
+ *
  * @param name_in the servo motor name
  * @param pin_in the pin that the servo motor is connected to
  */
@@ -53,14 +53,14 @@ void ServoMotor::reset()
 
 /**
  * The getAngle method returns the current angle
- * 
+ *
  * @return current angle of the servo motor
  */
 int ServoMotor::getAngle() { return angle; }
 
 /**
  * The changeAngle method changes the current angle
- * 
+ *
  * @param change the value to add to the angle
  */
 void ServoMotor::changeAngle(int change) { angle += change; }
@@ -85,7 +85,7 @@ void ServoMotor::test()
 
 /**
  * The moveTo method moves the servo motor to the specified angle
- * 
+ *
  * @param newAngle the new angle to move the motor arm to
  */
 void ServoMotor::moveTo(int newAngle)
@@ -110,7 +110,7 @@ void ServoMotor::moveTo(int newAngle)
 
 /**
  * The rotateCounterclockwise method rotates the servo motor counterclockwise
- * 
+ *
  * @param degrees the degrees to move counterclockwise
  */
 void ServoMotor::rotateCounterclockwise(int degrees)
@@ -124,7 +124,7 @@ void ServoMotor::rotateCounterclockwise(int degrees)
 
 /**
  * The rotateClockwise method rotates the servo motor clockwise
- * 
+ *
  * @param degrees the degrees to move clockwise
  */
 void ServoMotor::rotateClockwise(int degrees)

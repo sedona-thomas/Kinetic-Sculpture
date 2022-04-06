@@ -4,13 +4,15 @@
 #include <Arduino.h>
 #include <ESP32Servo.h>
 #include <cmath>
+#include <string>
+#include <stdint.h>
 
-#define SECOND 1000    /**< miliseconds (1000 miliseconds : 1 second) */
-#define SERVO_DELAY 15 /**< miliseconds */
+#define SECOND 1000   /**< miliseconds (1000 miliseconds : 1 second) */
+#define SERVO_DELAY 5 /**< miliseconds */
 
 /**
  * The ServoMotor class controls the necessary features of a Servo motor
- * 
+ *
  * @author Sedona Thomas
  * @version 1.0.0
  */
@@ -32,7 +34,7 @@ public:
 private:
   std::string name;
   Servo motor;
-  int port; /**< Port uses GPOI pin 15 by default */
+  int port; /**< Port uses GPOI pin 2 by default */
   int angle;
 };
 
