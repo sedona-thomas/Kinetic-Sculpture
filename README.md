@@ -85,9 +85,9 @@
 - Download `Case/box.dxf`
 - Upload to a laser cutter and cut out of 1/8 in wood sheets
 - Use a Dremel to make holes to insert motor wires, battery pack wires, and ESP32 USB-C connection 
- - Use with your own discretion because you want to have the holes big enough to fit each of your personal components
- - Suggestions: 
-  - Break the 1st and 4th teeth of the each long side box piece and use the dremel to make the hole big so that the motor wires to fit through and connect to the breadboard
+  - Use with your own discretion because you want to have the holes big enough to fit each of your personal components
+  - Suggestions: 
+    - Break the 1st and 4th teeth of the each long side box piece and use the dremel to make the hole big so that the motor wires to fit through and connect to the breadboard
   - Make sure that the holes for the battery wires and ESP32 USB-Connection are higher than height of the breadboard for easier connection
 - Super glue the upper portion of the box together so the inner components can be accessed by lifting the entire upper half
  - Suggestions:
