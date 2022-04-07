@@ -90,29 +90,29 @@
     - Break the 1st and 4th teeth of the each long side box piece and use the dremel to make the hole big so that the motor wires to fit through and connect to the breadboard
   - Make sure that the holes for the battery wires and ESP32 USB-Connection are higher than height of the breadboard for easier connection
 - Super glue the upper portion of the box together so the inner components can be accessed by lifting the entire upper half
- - Suggestions:
-  - For easy detachment if the glue all the sides of the box piece, then just press top onto glued pieces
-  - Since the bottom is attached to other components be gentle when pressing the assembled box pieces on to it
+  - Suggestions:
+    - For easy detachment if the glue all the sides of the box piece, then just press top onto glued pieces
+    - Since the bottom is attached to other components be gentle when pressing the assembled box pieces on to it
 
 #### Adding Components to Top Box Piece
 - Use a pencil to trace a general outline of the 2 Servo motors for the leaves and the stepper motor for the rose
- - The stepper motor should be centered and the servo motors should be equally spaced on each side
+  - The stepper motor should be centered and the servo motors should be equally spaced on each side
 - Use a dremel to drill holes for the motors
- - Suggestion: only drill holes large enough to fit the top half of the motors
+  - Suggestion: only drill holes large enough to fit the top half of the motors
 - Hot glue the motors to fit through the holes in the top of the box
 
 ####  Adding Components to Bottom Box Piece
 - After retrieving laser cutted pieces use the bottom piece to add all the hardware components
 - Remove the backing of breadboard and stick to piece
- - Note: The meausurements are for a standard full-sized breadboard
+  - Note: The meausurements are for a standard full-sized breadboard
 - For the DC motors and the back axel, use a flat object to glue to each end of the side of the bottom piece that is not stuck to the breadboard
- - Note: We used a small protoboard since the holes fit our jewelry hooks
+  - Note: We used a small protoboard since the holes fit our jewelry hooks
 - Hot glue the DC motors to either ends of one protoboard
- - Note: Make sure that extended rod side sticks out so wheels can be pushed on to it
+  - Note: Make sure that extended rod side sticks out so wheels can be pushed on to it
 - For the other end, small jewelry eye hooks were forced onto the protoboard and hot glued so that the axel rod can fit through each loop 
 - Insert something small enough to fit into the small wheels, a small metal rod was used to stabilize the weight of the project
 - Secure an external power source to the middle of the bottom piece 
- - We used a 4 AA battery pack (9V)
+  - We used a 4 AA battery pack (9V)
 
 #### Connecting Wires
 - Wires should be soldered the DC motors and the 4 AA Battery pack come with soldered wires
@@ -150,11 +150,11 @@
 - Drill a hole into the base of the flower deep enough to fit the stepper motor axel
 - Fill the hole in the rose with hot glue and secure to the stepper motor axel
 - Decorate the enclosure with colorful felt to resemble a garden
- - For the blue flowers, cut out small inorganic shapes. Pinch one end to scrunch the sides together and secure with hot glue
- - For the leaves, cut out teardrop shapes from green felt and add green wiring down the middle to shape the leaves
+  - For the blue flowers, cut out small inorganic shapes. Pinch one end to scrunch the sides together and secure with hot glue
+  - For the leaves, cut out teardrop shapes from green felt and add green wiring down the middle to shape the leaves
 - For the motor leaves, hot glue three pieces of felt leaves and wires to a Servo attachment that fans out on both sides. Shape the leaf as desired
 - Paint the enclosure as desired
- - Suggestion: conceal holes  by adding "raised" leaves and decorate to look like a garden
+  - Suggestion: conceal holes  by adding "raised" leaves and decorate to look like a garden
 
 
 ## More Information
