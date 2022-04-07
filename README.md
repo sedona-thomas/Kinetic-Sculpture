@@ -146,6 +146,7 @@
 - Connect the other end of the DC motor to `the L293D out 2` pin
 
 #### Decorating
+
 - 3D print a flower (Suggestion: [Thingiverse link for 3D printable rose](https://www.thingiverse.com/thing:255980))
 - Drill a hole into the base of the flower deep enough to fit the stepper motor axel
 - Fill the hole in the rose with hot glue and secure to the stepper motor axel
@@ -156,6 +157,10 @@
 - Paint the enclosure as desired
   - Suggestion: conceal holes  by adding "raised" leaves and decorate to look like a garden
 
+## For Developers
+
+- Doxygen can be used to generate formal documentation pages for all files in this repository
+- HTML code documentation and UNIX man pages are generated for the kinetic sculpture in the `Sculpture` directory
 
 ## More Information
 
