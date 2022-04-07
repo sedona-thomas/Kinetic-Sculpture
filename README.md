@@ -165,7 +165,9 @@
 ## More Information
 
 Medium Blog Post: [https://sedonathomas.medium.com/kinetic-sculpture-20c4813ef82f](https://sedonathomas.medium.com/kinetic-sculpture-20c4813ef82f)
+
 Notion Blog Post:[https://www.notion.so/Module-3-Task-2-a74462a784cd426ea9fddb3125abe1c5](https://www.notion.so/Module-3-Task-2-a74462a784cd426ea9fddb3125abe1c5) 
+
 Youtube Demos: [https://youtu.be/uOoaBGFkzKg](https://youtu.be/uOoaBGFkzKg)
 
 ##
