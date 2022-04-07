@@ -88,9 +88,7 @@
 - Connect one end of the DC motor to `the L293D out 1` pin
 - Connect the other end of the DC motor to `the L293D out 2` pin
 
-#### Resources for Assembly 
-
-##### Building the Enclosure
+#### Building the Enclosure
 - Download `Case/box.dxf`
 - Upload to a paser cutter and cut out of 1/8 in wood
 - Use a Dremel to make holes to insert motor wires, battery pack wires, and ESP32 USB-C connection 
@@ -126,7 +124,7 @@
 - Wires should be soldered the DC motors and the 4 AA Battery pack come with soldered wired
 - The should go through the holes in the side pieces that were made prior and inserted into the breadboard
 
-#### Decoration
+#### Decorating
 - 3D print a rose [Thingiverse link for 3D printable rose](https://www.thingiverse.com/thing:255980)
 - Drill a hole into the base of the 3D printed rose deep enough to fit the stepper motor
 - Fill the hole in the rose with hot glue and insert into the stepper motor
